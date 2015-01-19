@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Aimeos web shop distribution',
-	'description' => 'Aimeos web shop distribution',
+	'description' => 'Aimeos web shop distribution to install the flexible, high performance shop system available in multiple languages with a single click. It contains all necessary components for running a web shop and integrates perfectly in CRM and ERP systems as well as payment and delivery service providers',
 	'category' => 'distribution',
 	'author' => 'Aimeos',
 	'author_email' => 'aimeos@aimeos.org',
