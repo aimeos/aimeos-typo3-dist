@@ -1,0 +1,2 @@
+#config.typolinkLinkAccessRestrictedPages = <my account page ID>
+#tx_aimeos.basket.target = <basket page ID>

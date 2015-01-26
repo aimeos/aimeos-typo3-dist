@@ -16,17 +16,17 @@ $EM_CONF[$_EXTKEY] = array(
 	'category' => 'distribution',
 	'author' => 'Aimeos',
 	'author_email' => 'aimeos@aimeos.org',
-	'state' => 'beta',
+	'state' => 'stable',
 	'internal' => '',
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '0.1.0',
+	'version' => '1.0.0',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.2.0-7.0.99',
+			'typo3' => '6.2.0-7.99.99',
 			'aimeos' => '2.0.0-2.99.99',
-			'bootstrap_package' => '6.2.0-6.2.99',
+			'bootstrap_package' => '6.2.0-6.99.99',
 		),
 		'conflicts' => array(
 		),
