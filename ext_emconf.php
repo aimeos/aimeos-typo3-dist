@@ -21,17 +21,17 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '1.3.0',
+	'version' => '1.4.0',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '6.2.0-7.99.99',
 			'aimeos' => '2.2.0-2.99.99',
 			'bootstrap_package' => '6.2.0-6.99.99',
-			'realurl' => '1.13.3-2.99.99',
 		),
 		'conflicts' => array(
 		),
 		'suggests' => array(
+			'realurl' => '1.13.3-2.99.99',
 		),
 	),
 );
