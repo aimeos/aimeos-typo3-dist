@@ -31,14 +31,14 @@ class Setup
 			return;
 		}
 
-		$this->_createTypoScriptConstants();
+		$this->createTypoScriptConstants();
 	}
 
 
 	/**
 	 * Creates the TypoScript constants.txt file with necessary page IDs
 	 */
-	protected function _createTypoScriptConstants()
+	protected function createTypoScriptConstants()
 	{
 		$data = '';
 		$ds = DIRECTORY_SEPARATOR;
@@ -48,6 +48,12 @@ class Setup
 
 		foreach( $records as $record ) {
 			$data .= 'tx_aimeos.basket.target = ' . intval( $record['uid'] ) . "\n";
+		}
+
+		$records = BackendUtility::getRecordsByField( 'pages', 'title', 'Users' );
+
+		foreach( $records as $record ) {
+			$data .= 'tx_aimeos.customer.pid = ' . intval( $record['uid'] ) . "\n";
 		}
 
 		$records = BackendUtility::getRecordsByField( 'pages', 'title', 'My account' );
