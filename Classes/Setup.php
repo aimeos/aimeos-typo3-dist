@@ -59,7 +59,7 @@ class Setup
 		$records = BackendUtility::getRecordsByField( 'pages', 'title', 'My account' );
 
 		foreach( $records as $record ) {
-			$data .= 'config.typolinkLinkAccessRestrictedPages = ' . intval( $record['uid'] ) . "\n";
+			$data .= 'tx_aimeos.myaccount.target = ' . intval( $record['uid'] ) . "\n";
 		}
 
 		GeneralUtility::writeFile( $filename, $data );
