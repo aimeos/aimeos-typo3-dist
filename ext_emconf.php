@@ -25,13 +25,13 @@ $EM_CONF[$_EXTKEY] = array(
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '6.2.0-7.99.99',
-			'aimeos' => '2.2.0-16.99.99',
-			'bootstrap_package' => '6.2.0-6.99.99',
+			'aimeos' => '16.0.0-16.99.99',
+			'bootstrap_package' => '6.2.0-7.99.99',
 		),
 		'conflicts' => array(
 		),
 		'suggests' => array(
-			'realurl' => '1.13.3-1.99.99',
+			'realurl' => '1.13.8-1.99.99',
 		),
 	),
 );
