@@ -24,14 +24,14 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '17.4.0',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.2.0-8.99.99',
-			'bootstrap_package' => '6.2.0-8.99.99',
+			'typo3' => '7.6.0-8.99.99',
+			'bootstrap_package' => '7.1.0-8.99.99',
 			'aimeos' => '16.10.0-17.99.99',
 		),
 		'conflicts' => array(
 		),
 		'suggests' => array(
-			'realurl' => '1.13.8-1.99.99',
+			'realurl' => '1.13.7-1.99.99',
 		),
 	),
 );
