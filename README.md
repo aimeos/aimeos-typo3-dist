@@ -17,7 +17,7 @@ license and is available for free.
 ## Links
 
 * [Web site](https://aimeos.org/TYPO3)
-* [Help](https://aimeos.org/TYPO3)
+* [Help](https://aimeos.org/help)
 * [Documentation](https://aimeos.org/docs/TYPO3)
 * [Issue tracker](https://github.com/aimeos/aimeos-typo3-dist/issues)
 * [Source code](https://github.com/aimeos/aimeos-typo3-dist)
