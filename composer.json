@@ -21,6 +21,7 @@
 		"aimeos_dist": "self.version"
 	},
 	"autoload": {
+		"classmap": ["Classes"],
 		"psr-4": {
 			"Aimeos\\Aimeos\\": "Classes"
 		}
