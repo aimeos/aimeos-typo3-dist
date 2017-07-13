@@ -17,6 +17,9 @@
 		"php": ">=5.4.0",
 		"aimeos/aimeos-typo3": "dev-master"
 	},
+	"replace": {
+		"aimeos_dist": "self.version"
+	},
 	"autoload": {
 		"psr-4": {
 			"Aimeos\\Aimeos\\": "Classes"
