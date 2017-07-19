@@ -21,7 +21,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '17.4.0',
+	'version' => '17.7.0',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '7.6.0-8.99.99',
@@ -31,7 +31,7 @@ $EM_CONF[$_EXTKEY] = array(
 		'conflicts' => array(
 		),
 		'suggests' => array(
-			'realurl' => '1.13.7-1.99.99',
+			'realurl' => '1.13.7-2.99.99',
 		),
 	),
 );
