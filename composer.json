@@ -18,7 +18,7 @@
 		"dmitryd/typo3-realurl": "~2.2",
 		"bk2k/bootstrap-package": "~8.0",
 		"sjbr/static-info-tables": "~6.0",
-		"aimeos/aimeos-typo3": "dev-master"
+		"aimeos/aimeos-typo3": "2017.10"
 	},
 	"replace": {
 		"aimeos_dist": "self.version"
