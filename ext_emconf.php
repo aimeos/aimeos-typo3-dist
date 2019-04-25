@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Aimeos web shop distribution',
-	'description' => 'The Aimeos web shop distribution is a fast, flexible and usability optimized shop system and e-commerce solution available in multiple languages. It contains all necessary components for running a web shop and integrates perfectly in CRM and ERP systems as well as payment and delivery service providers',
+	'description' => 'Professional, full-featured and ultra-fast TYPO3 e-commerce distribution for online shops, complex B2B applications and #gigacommerce. Turns TYPO3 into the best platform for content commerce and your e-commerce requirements',
 	'category' => 'distribution',
 	'author' => 'Aimeos',
 	'author_email' => 'aimeos@aimeos.org',
@@ -21,17 +21,16 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '18.4.0',
+	'version' => '19.4.0',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '7.6.0-8.99.99',
-			'bootstrap_package' => '7.1.0-8.99.99',
-			'aimeos' => '18.4.0-18.99.99',
+			'typo3' => '9.5.0-9.5.99',
+			'bootstrap_package' => '10.0.0-10.99.99',
+			'aimeos' => '19.4.0-19.99.99',
 		),
 		'conflicts' => array(
 		),
 		'suggests' => array(
-			'realurl' => '1.13.7-2.99.99',
 		),
 	),
 );
