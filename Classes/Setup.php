@@ -10,7 +10,7 @@
 namespace Aimeos\AimeosDist;
 
 use \TYPO3\CMS\Core\Utility\GeneralUtility;
-use \TYPO3\CMS\Backend\Utility\BackendUtility;
+use \TYPO3\CMS\Core\Database\ConnectionPool;
 
 
 /**
@@ -43,22 +43,26 @@ class Setup
 		$data = '';
 		$ds = DIRECTORY_SEPARATOR;
 		$filename = dirname( __DIR__ ) . $ds . 'Configuration' . $ds . 'TypoScript' . $ds . 'constants.txt';
+		$q = GeneralUtility::makeInstance( ConnectionPool::class )->getQueryBuilderForTable( 'pages' );
 
-		$records = BackendUtility::getRecordsByField( 'pages', 'title', 'Basket' );
+		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Basket' ) );
+		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
 
-		foreach( $records as $record ) {
+		while( $record = $stmt->fetch() ) {
 			$data .= 'tx_aimeos.basket.target = ' . intval( $record['uid'] ) . "\n";
 		}
 
-		$records = BackendUtility::getRecordsByField( 'pages', 'title', 'Users' );
+		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Users' ) );
+		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
 
-		foreach( $records as $record ) {
+		while( $record = $stmt->fetch() ) {
 			$data .= 'tx_aimeos.customer.pid = ' . intval( $record['uid'] ) . "\n";
 		}
 
-		$records = BackendUtility::getRecordsByField( 'pages', 'title', 'My account' );
+		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'My account' ) );
+		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
 
-		foreach( $records as $record ) {
+		while( $record = $stmt->fetch() ) {
 			$data .= 'tx_aimeos.myaccount.target = ' . intval( $record['uid'] ) . "\n";
 		}
 
