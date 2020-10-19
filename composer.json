@@ -17,10 +17,7 @@
 		"php": ">=5.4.0",
 		"bk2k/bootstrap-package": "~10.0",
 		"sjbr/static-info-tables": "~6.6",
-		"aimeos/aimeos-typo3": "~19.4"
-	},
-	"replace": {
-		"aimeos_dist": "self.version"
+		"aimeos/aimeos-typo3": "~20.10"
 	},
 	"autoload": {
 		"classmap": ["Classes"],
