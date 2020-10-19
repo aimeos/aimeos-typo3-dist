@@ -25,7 +25,7 @@ class Setup
 	 *
 	 * @param string|null $extname Installed extension name
 	 */
-	public function process( $extname = null )
+	public function process( string $extname = null )
 	{
 		if( $extname !== 'aimeos_dist' ) {
 			return;
@@ -59,11 +59,11 @@ class Setup
 			$data .= 'tx_aimeos.customer.pid = ' . intval( $record['uid'] ) . "\n";
 		}
 
-		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'My account' ) );
+		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Profile' ) );
 		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
 
 		while( $record = $stmt->fetch() ) {
-			$data .= 'tx_aimeos.myaccount.target = ' . intval( $record['uid'] ) . "\n";
+			$data .= 'tx_aimeos.profile.target = ' . intval( $record['uid'] ) . "\n";
 		}
 
 		GeneralUtility::writeFile( $filename, $data );
