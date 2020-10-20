@@ -3,5 +3,4 @@ services:
     tags:
       - name: event.listener
         identifier: 'aimeos.setup'
-        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionDatabaseContentHasBeenImportedEvent
-        before: ''
+        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent

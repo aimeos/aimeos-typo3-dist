@@ -11,7 +11,7 @@ namespace Aimeos\AimeosDist\EventListener;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Extensionmanager\Event\AfterExtensionDatabaseContentHasBeenImportedEvent;
+use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
 
 
 /**
@@ -24,11 +24,26 @@ class Setup
 	/**
 	 * Executes the setup tasks if extension is installed.
 	 *
-	 * @param AfterExtensionDatabaseContentHasBeenImportedEvent $event Event object
+	 * @param AfterExtensionFilesHaveBeenImportedEvent $event Event object
 	 */
-	public function __invoke( AfterExtensionDatabaseContentHasBeenImportedEvent $event ) : void
+	public function __invoke( AfterExtensionFilesHaveBeenImportedEvent $event ) : void
 	{
 		if( $event->getPackageKey() !== 'aimeos_dist' ) {
+			return;
+		}
+
+		// $this->createTypoScriptConstants();
+	}
+
+
+	/**
+	 * Executes the setup tasks if extension is installed.
+	 *
+	 * @param string|null $extname Installed extension name
+	 */
+	public function process( string $extname = null )
+	{
+		if( $extname !== 'aimeos_dist' ) {
 			return;
 		}
 
@@ -43,7 +58,7 @@ class Setup
 	{
 		$data = '';
 		$ds = DIRECTORY_SEPARATOR;
-		$filename = dirname( __DIR__ ) . $ds . 'Configuration' . $ds . 'TypoScript' . $ds . 'constants.txt';
+		$filename = dirname( __DIR__, 2 ) . $ds . 'Configuration' . $ds . 'TypoScript' . $ds . 'constants.txt';
 		$q = GeneralUtility::makeInstance( ConnectionPool::class )->getQueryBuilderForTable( 'pages' );
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Basket' ) );
