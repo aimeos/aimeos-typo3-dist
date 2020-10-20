@@ -3,4 +3,4 @@ if (!defined('TYPO3_MODE')) {
 	die('Access denied.');
 }
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Aimeos Distribution');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('aimeos_dist', 'Configuration/TypoScript', 'Aimeos Distribution');
