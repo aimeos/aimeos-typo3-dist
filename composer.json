@@ -15,9 +15,10 @@
 	"prefer-stable": true,
 	"require": {
 		"php": "~7.1",
-		"bk2k/bootstrap-package": "~10.0|~11.0",
-		"sjbr/static-info-tables": "~6.6",
-		"aimeos/aimeos-typo3": "~20.10"
+		"typo3/cms-core": "~10.4",
+		"bk2k/bootstrap-package": "~11.0",
+		"sjbr/static-info-tables": "~6.9",
+		"aimeos/aimeos-typo3": "dev-master"
 	},
 	"autoload": {
 		"classmap": ["Classes"],
