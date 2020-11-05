@@ -18,4 +18,20 @@ if (TYPO3_MODE === 'BE')
 		'Aimeos\AimeosDist\EventListener\Setup',
 		'process'
 	);
+
+	/**
+	 * Execute the Aimeos setup tasks automatically to create the required tables
+	 */
+	$signalSlotDispatcher->connect(
+		'TYPO3\\CMS\\Extensionmanager\\Service\\ExtensionManagementService',
+		'hasInstalledExtensions', // @deprecated, use "afterExtensionInstall" in TYPO3 10+ and PSR Events in 11+
+		'Aimeos\\Aimeos\\Setup',
+		'signal'
+	);
+	$signalSlotDispatcher->connect(
+		'TYPO3\CMS\Extensionmanager\Utility\InstallUtility',
+		'afterExtensionInstall', // @deprecated, use PSR Events in 11+
+		'Aimeos\\Aimeos\\Setup',
+		'signal'
+	);
 }
