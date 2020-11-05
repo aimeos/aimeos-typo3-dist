@@ -52,12 +52,20 @@ Then install the Aimeos distribution for TYPO3:
 composer req aimeos/aimeos_dist
 ```
 
-Finally, activate the extensions:
+Then, activate the extensions and update the database:
 
 ```bash
+./vendor/bin/typo3 extension:activate scheduler
 ./vendor/bin/typo3 extension:activate aimeos
 ./vendor/bin/typo3 extension:activate aimeos_dist
+./vendor/bin/typo3 aimeos:setup --option=setup/default/demo:1
 ```
+
+## Configuration
+
+Log into the TYPO3 backend and create a new site configuration:
+
+[TYPO3 site configuration](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-typo3-siteconfig.png)
 
 ## License
 
