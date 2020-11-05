@@ -11,14 +11,14 @@ handling the checkout process and all e-mail handling for notifying the customer
 
 **Table of contents**
 - [Installation](#installation)
-    - [TYPO3 backend](#typo3-backend)
+    - [From TER](#from-ter)
     - [Composer](#composer)
 - [License](#license)
 - [Links](#links)
 
 ## Installation
 
-## TYPO3 backend
+## From TER
 
 For non-composer installations, you can install the Aimeos distribution using the
 Extension manager. You can choose Aimeos from the list of available distributions:
@@ -32,8 +32,31 @@ package from the TER:
 
 ### Composer
 
-If you have a composer based installation, you need to add this to your `composer.json`
-file in the root application directory:
+To install TYPO3 via composer, execute this at the command line
+
+```bash
+composer create-project "typo3/cms-base-distribution:^10.4" myshop
+```
+
+to install the required TYPO3 packages. Afterwards, you have to create the
+`FIRST_INSTALL` file to be able to run the setup process:
+
+```bash
+touch ./public/FIRST_INSTALL
+```
+
+For local installations, you can fire up the internal PHP web server
+
+```bash
+php -S 127.0.0.1:8000 -t public
+```
+
+and open the URL ("http://127.0.0.1:8000") in your web browser. If you use Apache or
+another web server, head over directly to the URL your installation is reachable directly
+without starting the PHP wev server. Complete the TYPO3 setup process before you continue
+to install the Aimeos distribution.
+
+Then, you need to add this to your `composer.json` file in the root application directory:
 
 ```json
     "scripts": {
@@ -46,7 +69,7 @@ file in the root application directory:
         ...
 }```
 
-Then install the Aimeos distribution for TYPO3:
+Install the Aimeos distribution for TYPO3 via command line:
 
 ```bash
 composer req aimeos/aimeos_dist
@@ -58,14 +81,10 @@ Then, activate the extensions and update the database:
 ./vendor/bin/typo3 extension:activate scheduler
 ./vendor/bin/typo3 extension:activate aimeos
 ./vendor/bin/typo3 extension:activate aimeos_dist
-./vendor/bin/typo3 aimeos:setup --option=setup/default/demo:1
 ```
 
-## Configuration
-
-Log into the TYPO3 backend and create a new site configuration:
-
-![TYPO3 site configuration](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-typo3-siteconfig.png)
+Now, your Aimeos installation is complete and you can check the frontend and log into
+the TYPO3 backend.
 
 ## License
 
