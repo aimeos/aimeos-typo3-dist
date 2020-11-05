@@ -1,0 +1,61 @@
+base: /
+baseVariants: {  }
+errorHandling: {  }
+languages:
+  -
+    title: English
+    enabled: true
+    base: /
+    typo3Language: default
+    locale: en_US
+    iso-639-1: en
+    websiteTitle: ''
+    navigationTitle: EN
+    hreflang: en-US
+    direction: ltr
+    flag: global
+    languageId: '0'
+  -
+    title: Deutsch
+    enabled: true
+    base: /de/
+    typo3Language: de
+    locale: de_DE
+    iso-639-1: de
+    websiteTitle: ''
+    navigationTitle: DE
+    hreflang: de-DE
+    direction: ltr
+    fallbackType: strict
+    fallbacks: '0'
+    flag: de
+    languageId: '1'
+rootPageId: 1
+routes: {  }
+websiteTitle: 'Aimeos TYPO3 distribution'
+routeEnhancers:
+  Aimeos:
+    type: Extbase
+    namespace: ai
+    defaultController: 'Catalog::list'
+    routes:
+      - { routePath: '/pin/{pin_action}/{pin_id}/{d_name}', _controller: 'Catalog::detail' }
+      - { routePath: '/history/{his_action}/{his_id}', _controller: 'Account::history' }
+      - { routePath: '/watch/{wat_action}/{wat_id}', _controller: 'Account::watch' }
+      - { routePath: '/watch/{wat_action}', _controller: 'Account::watch' }
+      - { routePath: '/fav/{fav_action}/{fav_id}', _controller: 'Account::favorite' }
+      - { routePath: '/fav/{fav_action}', _controller: 'Account::favorite' }
+      - { routePath: '/c/{f_name}~{f_catid}', _controller: 'Catalog::list' }
+      - { routePath: '/p/{d_name}/{d_prodid}/{d_pos}', _controller: 'Catalog::detail' }
+      - { routePath: '/d/{d_name}/{d_pos}', _controller: 'Catalog::detail' }
+      - { routePath: '/lt/{l_type}', _controller: 'Catalog::list' }
+      - { routePath: '/lp/{l_page}', _controller: 'Catalog::list' }
+      - { routePath: '/ls/{f_sort}/{l_page}', _controller: 'Catalog::list' }
+      - { routePath: '/l/{f_sort}', _controller: 'Catalog::list' }
+      - { routePath: '/b/{b_action}', _controller: 'Basket::index' }
+      - { routePath: '/co/{c_step}', _controller: 'Checkout::index' }
+    defaults:
+      b_action: ''
+      c_step: ''
+      f_sort: ''
+      d_pos: ''
