@@ -65,7 +65,7 @@ Then, activate the extensions and update the database:
 
 Log into the TYPO3 backend and create a new site configuration:
 
-[TYPO3 site configuration](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-typo3-siteconfig.png)
+![TYPO3 site configuration](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-typo3-siteconfig.png)
 
 ## License
 
