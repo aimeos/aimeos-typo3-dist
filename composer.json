@@ -18,7 +18,7 @@
 		"typo3/cms-core": "~10.4",
 		"bk2k/bootstrap-package": "~11.0",
 		"sjbr/static-info-tables": "~6.9",
-		"aimeos/aimeos-typo3": "~20.10"
+		"aimeos/aimeos-typo3": "~20.10||2020.10.x-dev"
 	},
 	"autoload": {
 		"classmap": ["Classes"],
