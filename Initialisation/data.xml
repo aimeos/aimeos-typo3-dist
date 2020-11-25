@@ -16,15 +16,22 @@
 		<excludeMap type="array"></excludeMap>
 		<softrefCfg type="array"></softrefCfg>
 		<extensionDependencies type="array">
-			<extkey index="0">scheduler</extkey>
-			<extkey index="1">beuser</extkey>
-			<extkey index="2">felogin</extkey>
-			<extkey index="3">pdfviewhelpers</extkey>
-			<extkey index="4">static_info_tables</extkey>
-			<extkey index="5">aimeos</extkey>
-			<extkey index="6">bootstrap_package</extkey>
-			<extkey index="7">form</extkey>
-			<extkey index="8">aimeos_dist</extkey>
+			<extkey index="0">core</extkey>
+			<extkey index="1">scheduler</extkey>
+			<extkey index="2">extbase</extkey>
+			<extkey index="3">frontend</extkey>
+			<extkey index="4">impexp</extkey>
+			<extkey index="5">recordlist</extkey>
+			<extkey index="6">backend</extkey>
+			<extkey index="7">beuser</extkey>
+			<extkey index="8">extensionmanager</extkey>
+			<extkey index="9">felogin</extkey>
+			<extkey index="10">tstemplate</extkey>
+			<extkey index="11">pdfviewhelpers</extkey>
+			<extkey index="12">static_info_tables</extkey>
+			<extkey index="13">aimeos</extkey>
+			<extkey index="14">bootstrap_package</extkey>
+			<extkey index="15">aimeos_dist</extkey>
 		</extensionDependencies>
 		<charset>utf-8</charset>
 		<pagetree type="array">
@@ -192,6 +199,73 @@
 					<uid>15</uid>
 					<pid>1</pid>
 					<title>Shop</title>
+					<relations index="rels" type="array"></relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+			</table>
+			<table index="sys_template" type="array">
+				<rec index="7" type="array">
+					<uid>7</uid>
+					<pid>1</pid>
+					<title>+ext</title>
+					<relations index="rels" type="array"></relations>
+					<softrefs type="array">
+						<softref_element index="include_static_file:ext_fileref:2" type="array">
+							<field>include_static_file</field>
+							<spKey>ext_fileref</spKey>
+							<matchString>EXT:bootstrap_package/Configuration/TypoScript</matchString>
+						</softref_element>
+						<softref_element index="include_static_file:ext_fileref:5" type="array">
+							<field>include_static_file</field>
+							<spKey>ext_fileref</spKey>
+							<matchString>EXT:aimeos/Configuration/TypoScript/</matchString>
+						</softref_element>
+						<softref_element index="include_static_file:ext_fileref:8" type="array">
+							<field>include_static_file</field>
+							<spKey>ext_fileref</spKey>
+							<matchString>EXT:aimeos_dist/Configuration/TypoScript</matchString>
+						</softref_element>
+					</softrefs>
+				</rec>
+				<rec index="6" type="array">
+					<uid>6</uid>
+					<pid>2</pid>
+					<title>+ext</title>
+					<relations index="rels" type="array"></relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+				<rec index="5" type="array">
+					<uid>5</uid>
+					<pid>5</pid>
+					<title>+ext</title>
+					<relations index="rels" type="array"></relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+				<rec index="4" type="array">
+					<uid>4</uid>
+					<pid>8</pid>
+					<title>+ext</title>
+					<relations index="rels" type="array"></relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+				<rec index="3" type="array">
+					<uid>3</uid>
+					<pid>11</pid>
+					<title>+ext</title>
+					<relations index="rels" type="array"></relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+				<rec index="2" type="array">
+					<uid>2</uid>
+					<pid>12</pid>
+					<title>+ext</title>
+					<relations index="rels" type="array"></relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+				<rec index="1" type="array">
+					<uid>1</uid>
+					<pid>13</pid>
+					<title>+ext</title>
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array"></softrefs>
 				</rec>
@@ -575,34 +649,6 @@
 					</relations>
 					<softrefs type="array"></softrefs>
 				</rec>
-				<rec index="10" type="array">
-					<uid>10</uid>
-					<pid>14</pid>
-					<title>[No title]</title>
-					<relations index="rels" type="array">
-						<element index="pages:13" type="array">
-							<id>13</id>
-							<table>pages</table>
-						</element>
-						<element index="pages:2" type="array">
-							<id>2</id>
-							<table>pages</table>
-						</element>
-					</relations>
-					<softrefs type="array"></softrefs>
-				</rec>
-				<rec index="9" type="array">
-					<uid>9</uid>
-					<pid>14</pid>
-					<title>[No title]</title>
-					<relations index="rels" type="array">
-						<element index="pages:2" type="array">
-							<id>2</id>
-							<table>pages</table>
-						</element>
-					</relations>
-					<softrefs type="array"></softrefs>
-				</rec>
 				<rec index="8" type="array">
 					<uid>8</uid>
 					<pid>14</pid>
@@ -660,34 +706,6 @@
 							<id>14</id>
 							<table>pages</table>
 						</element>
-						<element index="pages:2" type="array">
-							<id>2</id>
-							<table>pages</table>
-						</element>
-					</relations>
-					<softrefs type="array"></softrefs>
-				</rec>
-				<rec index="5" type="array">
-					<uid>5</uid>
-					<pid>15</pid>
-					<title>[No title]</title>
-					<relations index="rels" type="array">
-						<element index="pages:13" type="array">
-							<id>13</id>
-							<table>pages</table>
-						</element>
-						<element index="pages:2" type="array">
-							<id>2</id>
-							<table>pages</table>
-						</element>
-					</relations>
-					<softrefs type="array"></softrefs>
-				</rec>
-				<rec index="4" type="array">
-					<uid>4</uid>
-					<pid>15</pid>
-					<title>[No title]</title>
-					<relations index="rels" type="array">
 						<element index="pages:2" type="array">
 							<id>2</id>
 							<table>pages</table>
@@ -766,7 +784,12 @@
 					<uid>1</uid>
 					<pid>3</pid>
 					<title>demo@example.com</title>
-					<relations index="rels" type="array"></relations>
+					<relations index="rels" type="array">
+						<element index="fe_groups:3" type="array">
+							<id>3</id>
+							<table>fe_groups</table>
+						</element>
+					</relations>
 					<softrefs type="array"></softrefs>
 				</rec>
 			</table>
@@ -778,6 +801,9 @@
 				</table>
 			</page_contents>
 			<page_contents index="1" type="array">
+				<table index="sys_template" type="array">
+					<item index="7">1</item>
+				</table>
 				<table index="tt_content" type="array">
 					<item index="33">1</item>
 				</table>
@@ -798,6 +824,9 @@
 				</table>
 			</page_contents>
 			<page_contents index="2" type="array">
+				<table index="sys_template" type="array">
+					<item index="6">1</item>
+				</table>
 				<table index="tt_content" type="array">
 					<item index="32">1</item>
 				</table>
@@ -817,6 +846,9 @@
 				</table>
 			</page_contents>
 			<page_contents index="5" type="array">
+				<table index="sys_template" type="array">
+					<item index="5">1</item>
+				</table>
 				<table index="tt_content" type="array">
 					<item index="29">1</item>
 					<item index="28">1</item>
@@ -843,6 +875,9 @@
 				</table>
 			</page_contents>
 			<page_contents index="8" type="array">
+				<table index="sys_template" type="array">
+					<item index="4">1</item>
+				</table>
 				<table index="tt_content" type="array">
 					<item index="18">1</item>
 				</table>
@@ -858,16 +893,25 @@
 				</table>
 			</page_contents>
 			<page_contents index="11" type="array">
+				<table index="sys_template" type="array">
+					<item index="3">1</item>
+				</table>
 				<table index="tt_content" type="array">
 					<item index="15">1</item>
 				</table>
 			</page_contents>
 			<page_contents index="12" type="array">
+				<table index="sys_template" type="array">
+					<item index="2">1</item>
+				</table>
 				<table index="tt_content" type="array">
 					<item index="14">1</item>
 				</table>
 			</page_contents>
 			<page_contents index="13" type="array">
+				<table index="sys_template" type="array">
+					<item index="1">1</item>
+				</table>
 				<table index="tt_content" type="array">
 					<item index="13">1</item>
 					<item index="12">1</item>
@@ -876,8 +920,6 @@
 			</page_contents>
 			<page_contents index="14" type="array">
 				<table index="tt_content" type="array">
-					<item index="10">1</item>
-					<item index="9">1</item>
 					<item index="8">1</item>
 					<item index="7">1</item>
 					<item index="6">1</item>
@@ -885,8 +927,6 @@
 			</page_contents>
 			<page_contents index="15" type="array">
 				<table index="tt_content" type="array">
-					<item index="5">1</item>
-					<item index="4">1</item>
 					<item index="2">1</item>
 					<item index="1">1</item>
 				</table>
@@ -898,8 +938,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">1</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -947,7 +987,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">0</field>
+				<field index="SYS_LASTCHANGED" type="integer">1606325868</field>
 				<field index="abstract"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -994,13 +1034,173 @@
 				</field>
 			</related>
 		</tablerow>
+		<tablerow index="sys_template:7" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">7</field>
+				<field index="pid" type="integer">1</field>
+				<field index="tstamp" type="integer">1606325947</field>
+				<field index="crdate" type="integer">1606325868</field>
+				<field index="cruser_id" type="integer">2</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="hidden" type="integer">0</field>
+				<field index="starttime" type="integer">0</field>
+				<field index="endtime" type="integer">0</field>
+				<field index="sorting" type="integer">256</field>
+				<field index="description"></field>
+				<field index="t3_origuid" type="integer">0</field>
+				<field index="t3ver_oid" type="integer">0</field>
+				<field index="t3ver_wsid" type="integer">0</field>
+				<field index="t3ver_state" type="integer">0</field>
+				<field index="t3ver_stage" type="integer">0</field>
+				<field index="t3ver_count" type="integer">0</field>
+				<field index="t3ver_tstamp" type="integer">0</field>
+				<field index="t3ver_move_id" type="integer">0</field>
+				<field index="title">+ext</field>
+				<field index="sitetitle"></field>
+				<field index="root" type="integer">1</field>
+				<field index="clear" type="integer">3</field>
+				<field index="include_static_file">EXT:bootstrap_package/Configuration/TypoScript,EXT:aimeos/Configuration/TypoScript/,EXT:aimeos_dist/Configuration/TypoScript</field>
+				<field index="constants">page.theme.copyright.enable = 0
+page.theme.breadcrumb = 0
+
+page.logo.file = fileadmin/aimeos_dist/logo.png
+page.logo.height = 30px
+page.logo.width &gt;
+
+page.fluidtemplate.partialRootPath = EXT:aimeos_dist/Resources/Private/Partials/Page/
+
+plugin.bootstrap_package.settings.less.brand-primary = #B0A060
+plugin.bootstrap_package.settings.less.navbar-height = 20px
+plugin.bootstrap_package.settings.less.navbar-default-color = #B0A060
+plugin.bootstrap_package.settings.less.navbar-default-link-color = lighten(@navbar-default-link-active-color,15%)
+plugin.bootstrap_package.settings.less.navbar-default-link-active-color = #B0A060
+plugin.bootstrap_package.settings.less.btn-default-color = #B0A060
+plugin.bootstrap_package.settings.less.btn-font-weight = bold
+plugin.bootstrap_package.settings.less.grid-gutter-width = 20px
+plugin.bootstrap_package.settings.less.container-tablet = (730px + @grid-gutter-width)
+plugin.bootstrap_package.settings.less.container-tablet = (740px + @grid-gutter-width)
+</field>
+				<field index="config">page.shortcutIcon = fileadmin/aimeos_dist/favicon.png
+
+# Remove smoothscroll code in boostrap_package so changing images in detail view works
+page.includeJSFooterlibs.bootstrap_smoothscroll &gt;
+
+# From aimeos_dist/Configuration/TypoScript/constants.txt
+config.typolinkLinkAccessRestrictedPages = {$tx_aimeos.profile.target}
+config.typolinkLinkAccessRestrictedPages_addParams = &amp;return_url=###RETURN_URL###
+
+plugin.tx_aimeos.settings.client.html.basket.standard.url.target = {$tx_aimeos.basket.target}
+plugin.tx_aimeos.settings.mshop.customer.manager.typo3.pid-default = {$tx_aimeos.customer.pid}
+
+# Aimeos debug log level
+#plugin.tx_aimeos.settings.madmin.log.manager.standard.loglevel = 7
+
+# Disable basket caching for development
+# plugin.tx_aimeos.settings.client.html.basket.cache.enable = 0
+
+# Default group IDs for newly created users (single value or array)
+plugin.tx_aimeos.settings.controller.frontend.customer.groupids = 3
+
+# Show &quot;add to basket&quot; in list views
+#plugin.tx_aimeos.settings.client.html.catalog.lists.domains {
+#  0 = attribute
+#  1 = media
+#  2 = price
+#  3 = product
+#  4 = text
+#}
+#plugin.tx_aimeos.settings.client.html.catalog.lists.basket-add = 1
+
+# Use alternative image partial for detail pages
+# plugin.tx_aimeos.settings.client.html.catalog.detail.partials.image = catalog/detail/image-partial-bottom.php
+
+plugin.tx_aimeos.settings.client.html.catalog.selection.type.color = radio
+plugin.tx_aimeos.settings.client.html.catalog.selection.type.length = radio
+plugin.tx_aimeos.settings.client.html.catalog.selection.type.width = radio
+
+plugin.tx_aimeos.settings.client.html.catalog.attribute.type.sticker = input
+
+
+# Example for overwriting translations
+plugin.tx_aimeos.settings.i18n.de {
+  0 {
+    domain = client/code
+    string = sticker
+    trans = Sticker
+  }
+  1 {
+    domain = client/code
+    string = print
+    trans = Aufdruck
+  }
+}
+plugin.tx_aimeos.settings.i18n.en {
+  0 {
+    domain = client
+    string = Attributes
+    trans = Filter
+  }
+  1 {
+    domain = client
+    string = %1$d article
+    trans {
+      0 = %1$d
+      1 = %1$d
+    }
+  }
+}
+
+
+# Show small basket in the header
+# Add this to the main navigation Fluid template
+# &lt;f:if condition=&quot;{f:cObject(typoscriptObjectPath:'lib.navigation.misc.basket')}&quot;&gt;
+#     &lt;f:cObject typoscriptObjectPath=&quot;lib.navigation.misc.basket&quot; /&gt;
+# &lt;/f:if&gt;
+
+lib.navigation.misc = COA
+lib.navigation.misc.basket = USER
+lib.navigation.misc.basket {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap-&gt;run
+    vendorName = Aimeos
+    extensionName = Aimeos
+    pluginName = basket-small
+    controller = Basket
+    action = small
+    settings =&lt; plugin.tx_aimeos.settings
+}
+</field>
+				<field index="basedOn"></field>
+				<field index="includeStaticAfterBasedOn" type="integer">0</field>
+				<field index="static_file_mode" type="integer">0</field>
+				<field index="tx_impexp_origuid" type="integer">12</field>
+			</fieldlist>
+			<related index="rels" type="array">
+				<field index="include_static_file" type="array">
+					<softrefs type="array">
+						<keys type="array">
+							<softref_key index="ext_fileref" type="array">
+								<softref_element index="2" type="array">
+									<matchString>EXT:bootstrap_package/Configuration/TypoScript</matchString>
+								</softref_element>
+								<softref_element index="5" type="array">
+									<matchString>EXT:aimeos/Configuration/TypoScript/</matchString>
+								</softref_element>
+								<softref_element index="8" type="array">
+									<matchString>EXT:aimeos_dist/Configuration/TypoScript</matchString>
+								</softref_element>
+							</softref_key>
+						</keys>
+					</softrefs>
+				</field>
+			</related>
+		</tablerow>
 		<tablerow index="tt_content:33" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">33</field>
 				<field index="rowDescription"></field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -1215,8 +1415,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">2</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -1301,13 +1501,75 @@
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
+		<tablerow index="sys_template:6" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">6</field>
+				<field index="pid" type="integer">2</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
+				<field index="cruser_id" type="integer">2</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="hidden" type="integer">0</field>
+				<field index="starttime" type="integer">0</field>
+				<field index="endtime" type="integer">0</field>
+				<field index="sorting" type="integer">256</field>
+				<field index="description" type="NULL"></field>
+				<field index="t3_origuid" type="integer">0</field>
+				<field index="t3ver_oid" type="integer">0</field>
+				<field index="t3ver_wsid" type="integer">0</field>
+				<field index="t3ver_state" type="integer">0</field>
+				<field index="t3ver_stage" type="integer">0</field>
+				<field index="t3ver_count" type="integer">0</field>
+				<field index="t3ver_tstamp" type="integer">0</field>
+				<field index="t3ver_move_id" type="integer">0</field>
+				<field index="title">+ext</field>
+				<field index="sitetitle"></field>
+				<field index="root" type="integer">0</field>
+				<field index="clear" type="integer">0</field>
+				<field index="include_static_file"></field>
+				<field index="constants" type="NULL"></field>
+				<field index="config">config.additionalHeaders.1000.header = Cache-control: no-store
+
+page = PAGE
+page {
+    typeNum = 0
+    headerData &gt;
+    config {
+        disableAllHeaderCode = 1
+        disableCharsetHeader = 1
+        disablePrefixComment = 1
+    }
+    10 = CONTENT
+    10 {
+        table = tt_content
+        select.orderBy = sorting
+        select.languageField = sys_language_uid
+    }
+}
+
+tt_content.stdWrap &gt;
+tt_content.list = COA
+tt_content.list.20 = CASE
+tt_content.list.20.key.field = list_type
+tt_content.list.templateName &gt;
+tt_content.list.templateRootPaths &gt;
+tt_content.list.partialRootPaths &gt;
+tt_content.list.layoutRootPaths &gt;
+</field>
+				<field index="basedOn"></field>
+				<field index="includeStaticAfterBasedOn" type="integer">0</field>
+				<field index="static_file_mode" type="integer">0</field>
+				<field index="tx_impexp_origuid" type="integer">11</field>
+			</fieldlist>
+			<related index="rels" type="array"></related>
+		</tablerow>
 		<tablerow index="tt_content:32" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">32</field>
 				<field index="rowDescription"></field>
 				<field index="pid" type="integer">2</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -1474,8 +1736,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">3</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -1564,8 +1826,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">3</field>
 				<field index="pid" type="integer">3</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -1583,8 +1845,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">1</field>
 				<field index="pid" type="integer">3</field>
-				<field index="tstamp" type="integer">1606289968</field>
-				<field index="crdate" type="integer">1606289114</field>
+				<field index="tstamp" type="integer">1606326767</field>
+				<field index="crdate" type="integer">1606325864</field>
 				<field index="cruser_id" type="integer">0</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="disable" type="integer">0</field>
@@ -1593,8 +1855,8 @@
 				<field index="description" type="NULL"></field>
 				<field index="tx_extbase_type">0</field>
 				<field index="username">demo@example.com</field>
-				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$aDhlcjJIejNUZy5ZS3dKeQ$ZOz6a6ox4PhE4ksbWouazQU5ejDjLJ0tjgmBR9R2y2E</field>
-				<field index="usergroup"></field>
+				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$NXlZMm1RUll1N2VpQmkwcw$FfzLPOowAydpmFNiAvQjb2Z8+AIgy6wEJ0SavCCsX4U</field>
+				<field index="usergroup">3</field>
 				<field index="name">Test user</field>
 				<field index="first_name">Test</field>
 				<field index="middle_name"></field>
@@ -1611,10 +1873,10 @@
 				<field index="country"></field>
 				<field index="www"></field>
 				<field index="company">Test company</field>
-				<field index="image" type="NULL"></field>
+				<field index="image">0</field>
 				<field index="TSconfig" type="NULL"></field>
-				<field index="lastlogin" type="integer">0</field>
-				<field index="is_online" type="integer">0</field>
+				<field index="lastlogin" type="integer">1606328241</field>
+				<field index="is_online" type="integer">1606328216</field>
 				<field index="felogin_redirectPid" type="NULL"></field>
 				<field index="felogin_forgotHash"></field>
 				<field index="siteid">1.</field>
@@ -1628,14 +1890,24 @@
 				<field index="latitude" type="NULL"></field>
 				<field index="vdate" type="NULL"></field>
 			</fieldlist>
-			<related index="rels" type="array"></related>
+			<related index="rels" type="array">
+				<field index="usergroup" type="array">
+					<type>db</type>
+					<relations index="itemArray" type="array">
+						<element index="0" type="array">
+							<id>3</id>
+							<table>fe_groups</table>
+						</element>
+					</relations>
+				</field>
+			</related>
 		</tablerow>
 		<tablerow index="pages:4" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">4</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -1725,8 +1997,8 @@
 				<field index="uid" type="integer">31</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">4</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -1832,8 +2104,8 @@
 				<field index="uid" type="integer">30</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">4</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -1938,8 +2210,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">5</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -1987,7 +2259,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">0</field>
+				<field index="SYS_LASTCHANGED" type="integer">1606325868</field>
 				<field index="abstract"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -2024,13 +2296,48 @@
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
+		<tablerow index="sys_template:5" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">5</field>
+				<field index="pid" type="integer">5</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
+				<field index="cruser_id" type="integer">2</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="hidden" type="integer">0</field>
+				<field index="starttime" type="integer">0</field>
+				<field index="endtime" type="integer">0</field>
+				<field index="sorting" type="integer">256</field>
+				<field index="description" type="NULL"></field>
+				<field index="t3_origuid" type="integer">0</field>
+				<field index="t3ver_oid" type="integer">0</field>
+				<field index="t3ver_wsid" type="integer">0</field>
+				<field index="t3ver_state" type="integer">0</field>
+				<field index="t3ver_stage" type="integer">0</field>
+				<field index="t3ver_count" type="integer">0</field>
+				<field index="t3ver_tstamp" type="integer">0</field>
+				<field index="t3ver_move_id" type="integer">0</field>
+				<field index="title">+ext</field>
+				<field index="sitetitle"></field>
+				<field index="root" type="integer">0</field>
+				<field index="clear" type="integer">0</field>
+				<field index="include_static_file"></field>
+				<field index="constants" type="NULL"></field>
+				<field index="config">config.additionalHeaders.1000.header = Cache-control: max-age=300</field>
+				<field index="basedOn"></field>
+				<field index="includeStaticAfterBasedOn" type="integer">0</field>
+				<field index="static_file_mode" type="integer">0</field>
+				<field index="tx_impexp_origuid" type="integer">10</field>
+			</fieldlist>
+			<related index="rels" type="array"></related>
+		</tablerow>
 		<tablerow index="tt_content:29" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">29</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">5</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -2332,8 +2639,8 @@
 				<field index="uid" type="integer">28</field>
 				<field index="rowDescription"></field>
 				<field index="pid" type="integer">5</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -2501,8 +2808,8 @@
 				<field index="uid" type="integer">27</field>
 				<field index="rowDescription"></field>
 				<field index="pid" type="integer">5</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -2670,8 +2977,8 @@
 				<field index="uid" type="integer">26</field>
 				<field index="rowDescription"></field>
 				<field index="pid" type="integer">5</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -2848,8 +3155,8 @@
 				<field index="uid" type="integer">25</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">5</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -3035,8 +3342,8 @@
 				<field index="uid" type="integer">24</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">5</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -3213,8 +3520,8 @@
 				<field index="uid" type="integer">23</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">5</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -3391,8 +3698,8 @@
 				<field index="uid" type="integer">22</field>
 				<field index="rowDescription"></field>
 				<field index="pid" type="integer">5</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -3559,8 +3866,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">6</field>
 				<field index="pid" type="integer">5</field>
-				<field index="tstamp" type="integer">1606289316</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606328201</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -3660,8 +3967,8 @@
 				<field index="uid" type="integer">21</field>
 				<field index="rowDescription"></field>
 				<field index="pid" type="integer">6</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -3887,8 +4194,8 @@
 				<field index="uid" type="integer">20</field>
 				<field index="rowDescription"></field>
 				<field index="pid" type="integer">6</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -4039,8 +4346,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">7</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -4130,8 +4437,8 @@
 				<field index="uid" type="integer">19</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">7</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -4301,8 +4608,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">8</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -4350,7 +4657,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">0</field>
+				<field index="SYS_LASTCHANGED" type="integer">1606325868</field>
 				<field index="abstract"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -4387,13 +4694,48 @@
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
+		<tablerow index="sys_template:4" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">4</field>
+				<field index="pid" type="integer">8</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
+				<field index="cruser_id" type="integer">2</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="hidden" type="integer">0</field>
+				<field index="starttime" type="integer">0</field>
+				<field index="endtime" type="integer">0</field>
+				<field index="sorting" type="integer">256</field>
+				<field index="description" type="NULL"></field>
+				<field index="t3_origuid" type="integer">0</field>
+				<field index="t3ver_oid" type="integer">0</field>
+				<field index="t3ver_wsid" type="integer">0</field>
+				<field index="t3ver_state" type="integer">0</field>
+				<field index="t3ver_stage" type="integer">0</field>
+				<field index="t3ver_count" type="integer">0</field>
+				<field index="t3ver_tstamp" type="integer">0</field>
+				<field index="t3ver_move_id" type="integer">0</field>
+				<field index="title">+ext</field>
+				<field index="sitetitle"></field>
+				<field index="root" type="integer">0</field>
+				<field index="clear" type="integer">0</field>
+				<field index="include_static_file"></field>
+				<field index="constants" type="NULL"></field>
+				<field index="config">config.additionalHeaders.1000.header = Cache-control: max-age=30</field>
+				<field index="basedOn"></field>
+				<field index="includeStaticAfterBasedOn" type="integer">0</field>
+				<field index="static_file_mode" type="integer">0</field>
+				<field index="tx_impexp_origuid" type="integer">9</field>
+			</fieldlist>
+			<related index="rels" type="array"></related>
+		</tablerow>
 		<tablerow index="tt_content:18" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">18</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">8</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -4541,8 +4883,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">9</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -4590,7 +4932,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">0</field>
+				<field index="SYS_LASTCHANGED" type="integer">1606325868</field>
 				<field index="abstract"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -4632,8 +4974,8 @@
 				<field index="uid" type="integer">17</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">9</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -4781,8 +5123,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">10</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -4872,8 +5214,8 @@
 				<field index="uid" type="integer">16</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">10</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -5031,8 +5373,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">11</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -5117,13 +5459,48 @@
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
+		<tablerow index="sys_template:3" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">3</field>
+				<field index="pid" type="integer">11</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
+				<field index="cruser_id" type="integer">2</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="hidden" type="integer">0</field>
+				<field index="starttime" type="integer">0</field>
+				<field index="endtime" type="integer">0</field>
+				<field index="sorting" type="integer">256</field>
+				<field index="description" type="NULL"></field>
+				<field index="t3_origuid" type="integer">0</field>
+				<field index="t3ver_oid" type="integer">0</field>
+				<field index="t3ver_wsid" type="integer">0</field>
+				<field index="t3ver_state" type="integer">0</field>
+				<field index="t3ver_stage" type="integer">0</field>
+				<field index="t3ver_count" type="integer">0</field>
+				<field index="t3ver_tstamp" type="integer">0</field>
+				<field index="t3ver_move_id" type="integer">0</field>
+				<field index="title">+ext</field>
+				<field index="sitetitle"></field>
+				<field index="root" type="integer">0</field>
+				<field index="clear" type="integer">0</field>
+				<field index="include_static_file"></field>
+				<field index="constants" type="NULL"></field>
+				<field index="config">config.additionalHeaders.1000.header = Cache-control: no-store</field>
+				<field index="basedOn"></field>
+				<field index="includeStaticAfterBasedOn" type="integer">0</field>
+				<field index="static_file_mode" type="integer">0</field>
+				<field index="tx_impexp_origuid" type="integer">8</field>
+			</fieldlist>
+			<related index="rels" type="array"></related>
+		</tablerow>
 		<tablerow index="tt_content:15" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">15</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">11</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -5311,8 +5688,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">12</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -5397,13 +5774,48 @@
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
+		<tablerow index="sys_template:2" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">2</field>
+				<field index="pid" type="integer">12</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
+				<field index="cruser_id" type="integer">2</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="hidden" type="integer">0</field>
+				<field index="starttime" type="integer">0</field>
+				<field index="endtime" type="integer">0</field>
+				<field index="sorting" type="integer">256</field>
+				<field index="description" type="NULL"></field>
+				<field index="t3_origuid" type="integer">0</field>
+				<field index="t3ver_oid" type="integer">0</field>
+				<field index="t3ver_wsid" type="integer">0</field>
+				<field index="t3ver_state" type="integer">0</field>
+				<field index="t3ver_stage" type="integer">0</field>
+				<field index="t3ver_count" type="integer">0</field>
+				<field index="t3ver_tstamp" type="integer">0</field>
+				<field index="t3ver_move_id" type="integer">0</field>
+				<field index="title">+ext</field>
+				<field index="sitetitle"></field>
+				<field index="root" type="integer">0</field>
+				<field index="clear" type="integer">0</field>
+				<field index="include_static_file"></field>
+				<field index="constants" type="NULL"></field>
+				<field index="config">config.additionalHeaders.1000.header = Cache-control: no-store</field>
+				<field index="basedOn"></field>
+				<field index="includeStaticAfterBasedOn" type="integer">0</field>
+				<field index="static_file_mode" type="integer">0</field>
+				<field index="tx_impexp_origuid" type="integer">6</field>
+			</fieldlist>
+			<related index="rels" type="array"></related>
+		</tablerow>
 		<tablerow index="tt_content:14" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">14</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">12</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -5627,8 +6039,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">13</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -5713,13 +6125,48 @@
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
+		<tablerow index="sys_template:1" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">1</field>
+				<field index="pid" type="integer">13</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
+				<field index="cruser_id" type="integer">2</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="hidden" type="integer">0</field>
+				<field index="starttime" type="integer">0</field>
+				<field index="endtime" type="integer">0</field>
+				<field index="sorting" type="integer">256</field>
+				<field index="description" type="NULL"></field>
+				<field index="t3_origuid" type="integer">0</field>
+				<field index="t3ver_oid" type="integer">0</field>
+				<field index="t3ver_wsid" type="integer">0</field>
+				<field index="t3ver_state" type="integer">0</field>
+				<field index="t3ver_stage" type="integer">0</field>
+				<field index="t3ver_count" type="integer">0</field>
+				<field index="t3ver_tstamp" type="integer">0</field>
+				<field index="t3ver_move_id" type="integer">0</field>
+				<field index="title">+ext</field>
+				<field index="sitetitle"></field>
+				<field index="root" type="integer">0</field>
+				<field index="clear" type="integer">0</field>
+				<field index="include_static_file"></field>
+				<field index="constants" type="NULL"></field>
+				<field index="config">config.additionalHeaders.1000.header = Cache-control: no-store</field>
+				<field index="basedOn"></field>
+				<field index="includeStaticAfterBasedOn" type="integer">0</field>
+				<field index="static_file_mode" type="integer">0</field>
+				<field index="tx_impexp_origuid" type="integer">7</field>
+			</fieldlist>
+			<related index="rels" type="array"></related>
+		</tablerow>
 		<tablerow index="tt_content:13" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">13</field>
 				<field index="rowDescription"></field>
 				<field index="pid" type="integer">13</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -5887,8 +6334,8 @@
 				<field index="uid" type="integer">12</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">13</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -6083,8 +6530,8 @@
 				<field index="uid" type="integer">11</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">13</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -6251,8 +6698,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">14</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -6300,7 +6747,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">0</field>
+				<field index="SYS_LASTCHANGED" type="integer">1606325868</field>
 				<field index="abstract"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -6337,342 +6784,13 @@
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
-		<tablerow index="tt_content:10" type="array">
-			<fieldlist index="data" type="array">
-				<field index="uid" type="integer">10</field>
-				<field index="rowDescription"></field>
-				<field index="pid" type="integer">14</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
-				<field index="cruser_id" type="integer">2</field>
-				<field index="deleted" type="integer">0</field>
-				<field index="hidden" type="integer">0</field>
-				<field index="starttime" type="integer">0</field>
-				<field index="endtime" type="integer">0</field>
-				<field index="fe_group"></field>
-				<field index="sorting" type="integer">16</field>
-				<field index="editlock" type="integer">0</field>
-				<field index="sys_language_uid" type="integer">0</field>
-				<field index="l18n_parent" type="integer">0</field>
-				<field index="l10n_source" type="integer">0</field>
-				<field index="l10n_state" type="NULL"></field>
-				<field index="t3_origuid" type="integer">0</field>
-				<field index="l18n_diffsource">a:2:{s:11:&quot;pi_flexform&quot;;N;s:24:&quot;background_image_options&quot;;N;}</field>
-				<field index="t3ver_oid" type="integer">0</field>
-				<field index="t3ver_wsid" type="integer">0</field>
-				<field index="t3ver_state" type="integer">0</field>
-				<field index="t3ver_stage" type="integer">0</field>
-				<field index="t3ver_count" type="integer">0</field>
-				<field index="t3ver_tstamp" type="integer">0</field>
-				<field index="t3ver_move_id" type="integer">0</field>
-				<field index="CType">list</field>
-				<field index="header"></field>
-				<field index="header_position"></field>
-				<field index="bodytext" type="NULL"></field>
-				<field index="bullets_type" type="integer">0</field>
-				<field index="uploads_description" type="integer">0</field>
-				<field index="uploads_type" type="integer">0</field>
-				<field index="assets" type="integer">0</field>
-				<field index="image" type="integer">0</field>
-				<field index="imagewidth" type="integer">0</field>
-				<field index="imageorient" type="integer">0</field>
-				<field index="imagecols" type="integer">2</field>
-				<field index="imageborder" type="integer">0</field>
-				<field index="media" type="integer">0</field>
-				<field index="layout" type="integer">0</field>
-				<field index="frame_class">none</field>
-				<field index="cols" type="integer">0</field>
-				<field index="space_before_class"></field>
-				<field index="space_after_class"></field>
-				<field index="records"></field>
-				<field index="pages"></field>
-				<field index="colPos" type="integer">2</field>
-				<field index="subheader"></field>
-				<field index="header_link"></field>
-				<field index="image_zoom" type="integer">0</field>
-				<field index="header_layout">1</field>
-				<field index="list_type">aimeos_basket-small</field>
-				<field index="sectionIndex" type="integer">1</field>
-				<field index="linkToTop" type="integer">0</field>
-				<field index="file_collections"></field>
-				<field index="filelink_size" type="integer">0</field>
-				<field index="filelink_sorting"></field>
-				<field index="filelink_sorting_direction"></field>
-				<field index="target"></field>
-				<field index="date" type="integer">0</field>
-				<field index="recursive" type="integer">0</field>
-				<field index="imageheight" type="integer">0</field>
-				<field index="pi_flexform">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
-&lt;T3FlexForms&gt;
-    &lt;data&gt;
-        &lt;sheet index=&quot;sDEF&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;settings.client.html.basket.standard.url.target&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;13&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;settings.typo3.tsconfig&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;settings.client.jsonapi.url.target&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;2&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-    &lt;/data&gt;
-&lt;/T3FlexForms&gt;</field>
-				<field index="accessibility_title"></field>
-				<field index="accessibility_bypass" type="integer">0</field>
-				<field index="accessibility_bypass_text"></field>
-				<field index="selected_categories"></field>
-				<field index="category_field"></field>
-				<field index="table_class"></field>
-				<field index="table_caption" type="NULL"></field>
-				<field index="table_delimiter" type="integer">124</field>
-				<field index="table_enclosure" type="integer">0</field>
-				<field index="table_header_position" type="integer">0</field>
-				<field index="table_tfoot" type="integer">0</field>
-				<field index="tx_impexp_origuid" type="integer">32</field>
-				<field index="categories" type="integer">0</field>
-				<field index="teaser" type="NULL"></field>
-				<field index="readmore_label"></field>
-				<field index="quote_source"></field>
-				<field index="quote_link"></field>
-				<field index="panel_class">default</field>
-				<field index="file_folder"></field>
-				<field index="icon"></field>
-				<field index="icon_set"></field>
-				<field index="icon_file" type="integer">0</field>
-				<field index="icon_position"></field>
-				<field index="icon_size">0</field>
-				<field index="icon_type">0</field>
-				<field index="icon_color">#FFFFFF</field>
-				<field index="icon_background">#333333</field>
-				<field index="external_media_source"></field>
-				<field index="external_media_ratio"></field>
-				<field index="tx_bootstrappackage_card_group_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_carousel_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_accordion_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_icon_group_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_tab_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_timeline_item" type="integer">0</field>
-				<field index="background_color_class">none</field>
-				<field index="background_image" type="integer">0</field>
-				<field index="background_image_options">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
-&lt;T3FlexForms&gt;
-    &lt;data&gt;
-        &lt;sheet index=&quot;sDEF&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;parallax&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;0&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;fade&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;0&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;filter&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-    &lt;/data&gt;
-&lt;/T3FlexForms&gt;</field>
-			</fieldlist>
-			<related index="rels" type="array">
-				<field index="pi_flexform" type="array">
-					<type>flex</type>
-					<flexform index="flexFormRels" type="array">
-						<db_relations index="db" type="array">
-							<path index="sDEF/lDEF/settings.client.html.basket.standard.url.target/vDEF/" type="array">
-								<element index="0" type="array">
-									<id>13</id>
-									<table>pages</table>
-								</element>
-							</path>
-							<path index="sDEF/lDEF/settings.client.jsonapi.url.target/vDEF/" type="array">
-								<element index="0" type="array">
-									<id>2</id>
-									<table>pages</table>
-								</element>
-							</path>
-						</db_relations>
-						<softref_relations index="softrefs" type="array"></softref_relations>
-					</flexform>
-				</field>
-				<field index="background_image_options" type="array">
-					<type>flex</type>
-					<flexform index="flexFormRels" type="array">
-						<db_relations index="db" type="array"></db_relations>
-						<softref_relations index="softrefs" type="array"></softref_relations>
-					</flexform>
-				</field>
-			</related>
-		</tablerow>
-		<tablerow index="tt_content:9" type="array">
-			<fieldlist index="data" type="array">
-				<field index="uid" type="integer">9</field>
-				<field index="rowDescription"></field>
-				<field index="pid" type="integer">14</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
-				<field index="cruser_id" type="integer">2</field>
-				<field index="deleted" type="integer">0</field>
-				<field index="hidden" type="integer">0</field>
-				<field index="starttime" type="integer">0</field>
-				<field index="endtime" type="integer">0</field>
-				<field index="fe_group"></field>
-				<field index="sorting" type="integer">32</field>
-				<field index="editlock" type="integer">0</field>
-				<field index="sys_language_uid" type="integer">0</field>
-				<field index="l18n_parent" type="integer">0</field>
-				<field index="l10n_source" type="integer">0</field>
-				<field index="l10n_state" type="NULL"></field>
-				<field index="t3_origuid" type="integer">73</field>
-				<field index="l18n_diffsource">a:2:{s:11:&quot;pi_flexform&quot;;N;s:24:&quot;background_image_options&quot;;N;}</field>
-				<field index="t3ver_oid" type="integer">0</field>
-				<field index="t3ver_wsid" type="integer">0</field>
-				<field index="t3ver_state" type="integer">0</field>
-				<field index="t3ver_stage" type="integer">0</field>
-				<field index="t3ver_count" type="integer">0</field>
-				<field index="t3ver_tstamp" type="integer">0</field>
-				<field index="t3ver_move_id" type="integer">0</field>
-				<field index="CType">list</field>
-				<field index="header"></field>
-				<field index="header_position"></field>
-				<field index="bodytext" type="NULL"></field>
-				<field index="bullets_type" type="integer">0</field>
-				<field index="uploads_description" type="integer">0</field>
-				<field index="uploads_type" type="integer">0</field>
-				<field index="assets" type="integer">0</field>
-				<field index="image" type="integer">0</field>
-				<field index="imagewidth" type="integer">0</field>
-				<field index="imageorient" type="integer">0</field>
-				<field index="imagecols" type="integer">2</field>
-				<field index="imageborder" type="integer">0</field>
-				<field index="media" type="integer">0</field>
-				<field index="layout" type="integer">0</field>
-				<field index="frame_class">none</field>
-				<field index="cols" type="integer">0</field>
-				<field index="space_before_class"></field>
-				<field index="space_after_class"></field>
-				<field index="records"></field>
-				<field index="pages"></field>
-				<field index="colPos" type="integer">2</field>
-				<field index="subheader"></field>
-				<field index="header_link"></field>
-				<field index="image_zoom" type="integer">0</field>
-				<field index="header_layout">0</field>
-				<field index="list_type">aimeos_locale-select</field>
-				<field index="sectionIndex" type="integer">1</field>
-				<field index="linkToTop" type="integer">0</field>
-				<field index="file_collections"></field>
-				<field index="filelink_size" type="integer">0</field>
-				<field index="filelink_sorting"></field>
-				<field index="filelink_sorting_direction"></field>
-				<field index="target"></field>
-				<field index="date" type="integer">0</field>
-				<field index="recursive" type="integer">0</field>
-				<field index="imageheight" type="integer">0</field>
-				<field index="pi_flexform">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
-&lt;T3FlexForms&gt;
-    &lt;data&gt;
-        &lt;sheet index=&quot;sDEF&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;settings.client.jsonapi.url.target&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;2&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;settings.typo3.tsconfig&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-    &lt;/data&gt;
-&lt;/T3FlexForms&gt;</field>
-				<field index="accessibility_title"></field>
-				<field index="accessibility_bypass" type="integer">0</field>
-				<field index="accessibility_bypass_text"></field>
-				<field index="selected_categories"></field>
-				<field index="category_field"></field>
-				<field index="table_class"></field>
-				<field index="table_caption" type="NULL"></field>
-				<field index="table_delimiter" type="integer">124</field>
-				<field index="table_enclosure" type="integer">0</field>
-				<field index="table_header_position" type="integer">0</field>
-				<field index="table_tfoot" type="integer">0</field>
-				<field index="tx_impexp_origuid" type="integer">74</field>
-				<field index="categories" type="integer">0</field>
-				<field index="teaser" type="NULL"></field>
-				<field index="readmore_label"></field>
-				<field index="quote_source"></field>
-				<field index="quote_link"></field>
-				<field index="panel_class">default</field>
-				<field index="file_folder"></field>
-				<field index="icon"></field>
-				<field index="icon_set"></field>
-				<field index="icon_file" type="integer">0</field>
-				<field index="icon_position"></field>
-				<field index="icon_size">default</field>
-				<field index="icon_type">default</field>
-				<field index="icon_color">#FFFFFF</field>
-				<field index="icon_background">#333333</field>
-				<field index="external_media_source"></field>
-				<field index="external_media_ratio"></field>
-				<field index="tx_bootstrappackage_card_group_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_carousel_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_accordion_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_icon_group_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_tab_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_timeline_item" type="integer">0</field>
-				<field index="background_color_class">none</field>
-				<field index="background_image" type="integer">0</field>
-				<field index="background_image_options">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
-&lt;T3FlexForms&gt;
-    &lt;data&gt;
-        &lt;sheet index=&quot;sDEF&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;parallax&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;0&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;fade&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;0&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;filter&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-    &lt;/data&gt;
-&lt;/T3FlexForms&gt;</field>
-			</fieldlist>
-			<related index="rels" type="array">
-				<field index="pi_flexform" type="array">
-					<type>flex</type>
-					<flexform index="flexFormRels" type="array">
-						<db_relations index="db" type="array">
-							<path index="sDEF/lDEF/settings.client.jsonapi.url.target/vDEF/" type="array">
-								<element index="0" type="array">
-									<id>2</id>
-									<table>pages</table>
-								</element>
-							</path>
-						</db_relations>
-						<softref_relations index="softrefs" type="array"></softref_relations>
-					</flexform>
-				</field>
-				<field index="background_image_options" type="array">
-					<type>flex</type>
-					<flexform index="flexFormRels" type="array">
-						<db_relations index="db" type="array"></db_relations>
-						<softref_relations index="softrefs" type="array"></softref_relations>
-					</flexform>
-				</field>
-			</related>
-		</tablerow>
 		<tablerow index="tt_content:8" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">8</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">14</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -6855,8 +6973,8 @@
 				<field index="uid" type="integer">7</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">14</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -7078,8 +7196,8 @@
 				<field index="uid" type="integer">6</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">14</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -7246,8 +7364,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">15</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -7295,7 +7413,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">0</field>
+				<field index="SYS_LASTCHANGED" type="integer">1606325868</field>
 				<field index="abstract"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -7332,342 +7450,13 @@
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
-		<tablerow index="tt_content:5" type="array">
-			<fieldlist index="data" type="array">
-				<field index="uid" type="integer">5</field>
-				<field index="rowDescription"></field>
-				<field index="pid" type="integer">15</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
-				<field index="cruser_id" type="integer">2</field>
-				<field index="deleted" type="integer">0</field>
-				<field index="hidden" type="integer">0</field>
-				<field index="starttime" type="integer">0</field>
-				<field index="endtime" type="integer">0</field>
-				<field index="fe_group"></field>
-				<field index="sorting" type="integer">16</field>
-				<field index="editlock" type="integer">0</field>
-				<field index="sys_language_uid" type="integer">-1</field>
-				<field index="l18n_parent" type="integer">0</field>
-				<field index="l10n_source" type="integer">0</field>
-				<field index="l10n_state" type="NULL"></field>
-				<field index="t3_origuid" type="integer">32</field>
-				<field index="l18n_diffsource">a:2:{s:11:&quot;pi_flexform&quot;;N;s:24:&quot;background_image_options&quot;;N;}</field>
-				<field index="t3ver_oid" type="integer">0</field>
-				<field index="t3ver_wsid" type="integer">0</field>
-				<field index="t3ver_state" type="integer">0</field>
-				<field index="t3ver_stage" type="integer">0</field>
-				<field index="t3ver_count" type="integer">0</field>
-				<field index="t3ver_tstamp" type="integer">0</field>
-				<field index="t3ver_move_id" type="integer">0</field>
-				<field index="CType">list</field>
-				<field index="header"></field>
-				<field index="header_position"></field>
-				<field index="bodytext" type="NULL"></field>
-				<field index="bullets_type" type="integer">0</field>
-				<field index="uploads_description" type="integer">0</field>
-				<field index="uploads_type" type="integer">0</field>
-				<field index="assets" type="integer">0</field>
-				<field index="image" type="integer">0</field>
-				<field index="imagewidth" type="integer">0</field>
-				<field index="imageorient" type="integer">0</field>
-				<field index="imagecols" type="integer">2</field>
-				<field index="imageborder" type="integer">0</field>
-				<field index="media" type="integer">0</field>
-				<field index="layout" type="integer">0</field>
-				<field index="frame_class">none</field>
-				<field index="cols" type="integer">0</field>
-				<field index="space_before_class"></field>
-				<field index="space_after_class"></field>
-				<field index="records"></field>
-				<field index="pages"></field>
-				<field index="colPos" type="integer">2</field>
-				<field index="subheader"></field>
-				<field index="header_link"></field>
-				<field index="image_zoom" type="integer">0</field>
-				<field index="header_layout">1</field>
-				<field index="list_type">aimeos_basket-small</field>
-				<field index="sectionIndex" type="integer">1</field>
-				<field index="linkToTop" type="integer">0</field>
-				<field index="file_collections"></field>
-				<field index="filelink_size" type="integer">0</field>
-				<field index="filelink_sorting"></field>
-				<field index="filelink_sorting_direction"></field>
-				<field index="target"></field>
-				<field index="date" type="integer">0</field>
-				<field index="recursive" type="integer">0</field>
-				<field index="imageheight" type="integer">0</field>
-				<field index="pi_flexform">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
-&lt;T3FlexForms&gt;
-    &lt;data&gt;
-        &lt;sheet index=&quot;sDEF&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;settings.client.html.basket.standard.url.target&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;13&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;settings.typo3.tsconfig&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;settings.client.jsonapi.url.target&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;2&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-    &lt;/data&gt;
-&lt;/T3FlexForms&gt;</field>
-				<field index="accessibility_title"></field>
-				<field index="accessibility_bypass" type="integer">0</field>
-				<field index="accessibility_bypass_text"></field>
-				<field index="selected_categories"></field>
-				<field index="category_field"></field>
-				<field index="table_class"></field>
-				<field index="table_caption" type="NULL"></field>
-				<field index="table_delimiter" type="integer">124</field>
-				<field index="table_enclosure" type="integer">0</field>
-				<field index="table_header_position" type="integer">0</field>
-				<field index="table_tfoot" type="integer">0</field>
-				<field index="tx_impexp_origuid" type="integer">72</field>
-				<field index="categories" type="integer">0</field>
-				<field index="teaser" type="NULL"></field>
-				<field index="readmore_label"></field>
-				<field index="quote_source"></field>
-				<field index="quote_link"></field>
-				<field index="panel_class">default</field>
-				<field index="file_folder"></field>
-				<field index="icon"></field>
-				<field index="icon_set"></field>
-				<field index="icon_file" type="integer">0</field>
-				<field index="icon_position"></field>
-				<field index="icon_size">0</field>
-				<field index="icon_type">0</field>
-				<field index="icon_color">#FFFFFF</field>
-				<field index="icon_background">#333333</field>
-				<field index="external_media_source"></field>
-				<field index="external_media_ratio"></field>
-				<field index="tx_bootstrappackage_card_group_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_carousel_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_accordion_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_icon_group_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_tab_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_timeline_item" type="integer">0</field>
-				<field index="background_color_class">none</field>
-				<field index="background_image" type="integer">0</field>
-				<field index="background_image_options">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
-&lt;T3FlexForms&gt;
-    &lt;data&gt;
-        &lt;sheet index=&quot;sDEF&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;parallax&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;0&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;fade&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;0&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;filter&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-    &lt;/data&gt;
-&lt;/T3FlexForms&gt;</field>
-			</fieldlist>
-			<related index="rels" type="array">
-				<field index="pi_flexform" type="array">
-					<type>flex</type>
-					<flexform index="flexFormRels" type="array">
-						<db_relations index="db" type="array">
-							<path index="sDEF/lDEF/settings.client.html.basket.standard.url.target/vDEF/" type="array">
-								<element index="0" type="array">
-									<id>13</id>
-									<table>pages</table>
-								</element>
-							</path>
-							<path index="sDEF/lDEF/settings.client.jsonapi.url.target/vDEF/" type="array">
-								<element index="0" type="array">
-									<id>2</id>
-									<table>pages</table>
-								</element>
-							</path>
-						</db_relations>
-						<softref_relations index="softrefs" type="array"></softref_relations>
-					</flexform>
-				</field>
-				<field index="background_image_options" type="array">
-					<type>flex</type>
-					<flexform index="flexFormRels" type="array">
-						<db_relations index="db" type="array"></db_relations>
-						<softref_relations index="softrefs" type="array"></softref_relations>
-					</flexform>
-				</field>
-			</related>
-		</tablerow>
-		<tablerow index="tt_content:4" type="array">
-			<fieldlist index="data" type="array">
-				<field index="uid" type="integer">4</field>
-				<field index="rowDescription"></field>
-				<field index="pid" type="integer">15</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
-				<field index="cruser_id" type="integer">2</field>
-				<field index="deleted" type="integer">0</field>
-				<field index="hidden" type="integer">0</field>
-				<field index="starttime" type="integer">0</field>
-				<field index="endtime" type="integer">0</field>
-				<field index="fe_group"></field>
-				<field index="sorting" type="integer">32</field>
-				<field index="editlock" type="integer">0</field>
-				<field index="sys_language_uid" type="integer">-1</field>
-				<field index="l18n_parent" type="integer">0</field>
-				<field index="l10n_source" type="integer">0</field>
-				<field index="l10n_state" type="NULL"></field>
-				<field index="t3_origuid" type="integer">0</field>
-				<field index="l18n_diffsource">a:2:{s:11:&quot;pi_flexform&quot;;N;s:24:&quot;background_image_options&quot;;N;}</field>
-				<field index="t3ver_oid" type="integer">0</field>
-				<field index="t3ver_wsid" type="integer">0</field>
-				<field index="t3ver_state" type="integer">0</field>
-				<field index="t3ver_stage" type="integer">0</field>
-				<field index="t3ver_count" type="integer">0</field>
-				<field index="t3ver_tstamp" type="integer">0</field>
-				<field index="t3ver_move_id" type="integer">0</field>
-				<field index="CType">list</field>
-				<field index="header"></field>
-				<field index="header_position"></field>
-				<field index="bodytext" type="NULL"></field>
-				<field index="bullets_type" type="integer">0</field>
-				<field index="uploads_description" type="integer">0</field>
-				<field index="uploads_type" type="integer">0</field>
-				<field index="assets" type="integer">0</field>
-				<field index="image" type="integer">0</field>
-				<field index="imagewidth" type="integer">0</field>
-				<field index="imageorient" type="integer">0</field>
-				<field index="imagecols" type="integer">2</field>
-				<field index="imageborder" type="integer">0</field>
-				<field index="media" type="integer">0</field>
-				<field index="layout" type="integer">0</field>
-				<field index="frame_class">default</field>
-				<field index="cols" type="integer">0</field>
-				<field index="space_before_class"></field>
-				<field index="space_after_class"></field>
-				<field index="records"></field>
-				<field index="pages"></field>
-				<field index="colPos" type="integer">2</field>
-				<field index="subheader"></field>
-				<field index="header_link"></field>
-				<field index="image_zoom" type="integer">0</field>
-				<field index="header_layout">0</field>
-				<field index="list_type">aimeos_locale-select</field>
-				<field index="sectionIndex" type="integer">1</field>
-				<field index="linkToTop" type="integer">0</field>
-				<field index="file_collections"></field>
-				<field index="filelink_size" type="integer">0</field>
-				<field index="filelink_sorting"></field>
-				<field index="filelink_sorting_direction"></field>
-				<field index="target"></field>
-				<field index="date" type="integer">0</field>
-				<field index="recursive" type="integer">0</field>
-				<field index="imageheight" type="integer">0</field>
-				<field index="pi_flexform">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
-&lt;T3FlexForms&gt;
-    &lt;data&gt;
-        &lt;sheet index=&quot;sDEF&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;settings.client.jsonapi.url.target&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;2&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;settings.typo3.tsconfig&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-    &lt;/data&gt;
-&lt;/T3FlexForms&gt;</field>
-				<field index="accessibility_title"></field>
-				<field index="accessibility_bypass" type="integer">0</field>
-				<field index="accessibility_bypass_text"></field>
-				<field index="selected_categories"></field>
-				<field index="category_field"></field>
-				<field index="table_class"></field>
-				<field index="table_caption" type="NULL"></field>
-				<field index="table_delimiter" type="integer">124</field>
-				<field index="table_enclosure" type="integer">0</field>
-				<field index="table_header_position" type="integer">0</field>
-				<field index="table_tfoot" type="integer">0</field>
-				<field index="tx_impexp_origuid" type="integer">73</field>
-				<field index="categories" type="integer">0</field>
-				<field index="teaser" type="NULL"></field>
-				<field index="readmore_label"></field>
-				<field index="quote_source"></field>
-				<field index="quote_link"></field>
-				<field index="panel_class">default</field>
-				<field index="file_folder"></field>
-				<field index="icon"></field>
-				<field index="icon_set"></field>
-				<field index="icon_file" type="integer">0</field>
-				<field index="icon_position"></field>
-				<field index="icon_size">default</field>
-				<field index="icon_type">default</field>
-				<field index="icon_color">#FFFFFF</field>
-				<field index="icon_background">#333333</field>
-				<field index="external_media_source"></field>
-				<field index="external_media_ratio"></field>
-				<field index="tx_bootstrappackage_card_group_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_carousel_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_accordion_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_icon_group_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_tab_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_timeline_item" type="integer">0</field>
-				<field index="background_color_class">none</field>
-				<field index="background_image" type="integer">0</field>
-				<field index="background_image_options">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
-&lt;T3FlexForms&gt;
-    &lt;data&gt;
-        &lt;sheet index=&quot;sDEF&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;parallax&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;0&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;fade&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;0&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;filter&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-    &lt;/data&gt;
-&lt;/T3FlexForms&gt;</field>
-			</fieldlist>
-			<related index="rels" type="array">
-				<field index="pi_flexform" type="array">
-					<type>flex</type>
-					<flexform index="flexFormRels" type="array">
-						<db_relations index="db" type="array">
-							<path index="sDEF/lDEF/settings.client.jsonapi.url.target/vDEF/" type="array">
-								<element index="0" type="array">
-									<id>2</id>
-									<table>pages</table>
-								</element>
-							</path>
-						</db_relations>
-						<softref_relations index="softrefs" type="array"></softref_relations>
-					</flexform>
-				</field>
-				<field index="background_image_options" type="array">
-					<type>flex</type>
-					<flexform index="flexFormRels" type="array">
-						<db_relations index="db" type="array"></db_relations>
-						<softref_relations index="softrefs" type="array"></softref_relations>
-					</flexform>
-				</field>
-			</related>
-		</tablerow>
 		<tablerow index="tt_content:2" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">2</field>
 				<field index="rowDescription"></field>
 				<field index="pid" type="integer">15</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
@@ -7874,8 +7663,8 @@
 				<field index="uid" type="integer">1</field>
 				<field index="rowDescription"></field>
 				<field index="pid" type="integer">15</field>
-				<field index="tstamp" type="integer">1606289127</field>
-				<field index="crdate" type="integer">1606289127</field>
+				<field index="tstamp" type="integer">1606325868</field>
+				<field index="crdate" type="integer">1606325868</field>
 				<field index="cruser_id" type="integer">2</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
