@@ -93,6 +93,7 @@ the TYPO3 backend.
 
 - In case there is no page tree, go to the extension manager and un-/reinstall aimeos_dist and aimeos.
 - In case there are no products, go to the extension manager and click on the Aimeos update script.
+- To check the login functionality, you first need to assign a password to *customer_1@example.com*!
 
 ## Customize your Aimeos distribution
 
