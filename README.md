@@ -5,8 +5,8 @@
 # Aimeos online shop distribution for TYPO3
 
 The distribution package provides an out of the box web shop based on the the Aimeos
-online shop extension for TYPO3. The package contains a pre-configured, full featured shop
-including faceted search, product listings and detail views as well as baskets, coupon
+online shop extension for TYPO3 v10. The package contains a pre-configured, full featured shop
+including faceted search, product listings and detail views as well as baskets, coupons,
 handling the checkout process and all e-mail handling for notifying the customers.
 
 **Table of contents**
@@ -14,7 +14,8 @@ handling the checkout process and all e-mail handling for notifying the customer
   - [Installation](#installation)
   - [From TER](#from-ter)
     - [Composer](#composer)
-  - [Things to take care of](#things-to-take-care-of)
+  - [Troubleshooting](#troubleshooting)
+  - [Customize your Aimeos distribution](#customize-your-aimeos-distribution)
   - [License](#license)
   - [Links](#links)
 
@@ -38,9 +39,6 @@ To install TYPO3 via composer, execute this at the command line
 
 ```bash
 composer create-project "typo3/cms-base-distribution:^10.4" myshop
-
-// TYPO3 9
-composer create-project "typo3/cms-base-distribution:^9.5" myshop
 ```
 
 to install the required TYPO3 packages. Afterwards, you have to create the
@@ -91,11 +89,22 @@ Then activate the extensions and update the database:
 Now your Aimeos installation is complete and you can check the frontend and log into
 the TYPO3 backend.
 
-## Things to take care of
+## Troubleshooting
 
-- Check that the User folder (where the customers are saved to uon creating an account for each of them) has a website group. Each customer needs to assigned to that website group, otherwise they won't be able to log in. The usergroup must also be assigned to Aimeos -> Groups.
-- Any restricted pages must have that very website group assigned (See tab "Access").
-- On the root page (id = 0), create 2 backend user groups for administrators: admin and editor.
+- In case there is no page tree, go to the extension manager and un-/reinstall aimeos_dist and aimeos.
+- In case there are no products, go to the extension manager and click on the Aimeos update script.
+
+## Customize your Aimeos distribution
+
+Creating a distribution is all about exporting the proper settings, tables and files. To facilitate
+this process, you can import a SQL preset from `Resources/Public/ImportExportPreset.sql` manually
+to your MySQL / Maria database (use phpmyadmin or a similar tool, but not TYPO3). Once imported,
+you will find a preset option in the *File & Preset* tab of the Import-Export manager. Select and
+load it, save it under a new name, then make your changes.
+
+![File & Preset](./Documentation/Images/Aimeos-imp-exp-settings.png)
+
+Read more about creating a TYPO3 distribution at the [TYPO3 Documentation](https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ExtensionArchitecture/CreateNewDistribution/Index.html).
 
 ## License
 
