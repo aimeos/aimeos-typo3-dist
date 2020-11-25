@@ -10,11 +10,13 @@ including faceted search, product listings and detail views as well as baskets, 
 handling the checkout process and all e-mail handling for notifying the customers.
 
 **Table of contents**
-- [Installation](#installation)
-    - [From TER](#from-ter)
+- [Aimeos online shop distribution for TYPO3](#aimeos-online-shop-distribution-for-typo3)
+  - [Installation](#installation)
+  - [From TER](#from-ter)
     - [Composer](#composer)
-- [License](#license)
-- [Links](#links)
+  - [Things to take care of](#things-to-take-care-of)
+  - [License](#license)
+  - [Links](#links)
 
 ## Installation
 
@@ -36,6 +38,9 @@ To install TYPO3 via composer, execute this at the command line
 
 ```bash
 composer create-project "typo3/cms-base-distribution:^10.4" myshop
+
+// TYPO3 9
+composer create-project "typo3/cms-base-distribution:^9.5" myshop
 ```
 
 to install the required TYPO3 packages. Afterwards, you have to create the
@@ -45,7 +50,7 @@ to install the required TYPO3 packages. Afterwards, you have to create the
 touch ./public/FIRST_INSTALL
 ```
 
-For local installations, you can fire up the internal PHP web server
+For local installations you can fire up the internal PHP web server
 
 ```bash
 php -S 127.0.0.1:8000 -t public
@@ -56,7 +61,7 @@ another web server, head over directly to the URL your installation is reachable
 without starting the PHP wev server. Complete the TYPO3 setup process before you continue
 to install the Aimeos distribution.
 
-Then, you need to add this to your `composer.json` file in the root application directory:
+Then you need to add this to your `composer.json` file in the root application directory:
 
 ```json
     "scripts": {
@@ -75,7 +80,7 @@ Install the Aimeos distribution for TYPO3 via command line:
 composer req aimeos/aimeos_dist
 ```
 
-Then, activate the extensions and update the database:
+Then activate the extensions and update the database:
 
 ```bash
 ./vendor/bin/typo3 extension:activate scheduler
@@ -83,8 +88,14 @@ Then, activate the extensions and update the database:
 ./vendor/bin/typo3 extension:activate aimeos_dist
 ```
 
-Now, your Aimeos installation is complete and you can check the frontend and log into
+Now your Aimeos installation is complete and you can check the frontend and log into
 the TYPO3 backend.
+
+## Things to take care of
+
+- Check that the User folder (where the customers are saved to uon creating an account for each of them) has a website group. Each customer needs to assigned to that website group, otherwise they won't be able to log in. The usergroup must also be assigned to Aimeos -> Groups.
+- Any restricted pages must have that very website group assigned (See tab "Access").
+- On the root page (id = 0), create 2 backend user groups for administrators: admin and editor.
 
 ## License
 
