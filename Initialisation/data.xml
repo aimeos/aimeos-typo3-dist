@@ -12,7 +12,27 @@
 			<TYPO3_version>10.4.10</TYPO3_version>
 			<created>Wednesday 25. November 2020</created>
 		</meta>
-		<static_tables index="relStaticTables" type="array"></static_tables>
+		<static_tables index="relStaticTables" type="array">
+			<tablename index="0">be_groups</tablename>
+			<tablename index="1">pages</tablename>
+			<tablename index="2">sys_file</tablename>
+			<tablename index="3">sys_file_collection</tablename>
+			<tablename index="4">sys_file_metadata</tablename>
+			<tablename index="5">sys_file_reference</tablename>
+			<tablename index="6">sys_file_storage</tablename>
+			<tablename index="7">sys_filemounts</tablename>
+			<tablename index="8">sys_language</tablename>
+			<tablename index="9">sys_log</tablename>
+			<tablename index="10">tx_scheduler_task_group</tablename>
+			<tablename index="11">backend_layout</tablename>
+			<tablename index="12">fe_groups</tablename>
+			<tablename index="13">fe_users</tablename>
+			<tablename index="14">sys_template</tablename>
+			<tablename index="15">tt_content</tablename>
+			<tablename index="16">tx_impexp_presets</tablename>
+			<tablename index="17">tx_extensionmanager_domain_model_extension</tablename>
+			<tablename index="18">tx_extensionmanager_domain_model_repository</tablename>
+		</static_tables>
 		<excludeMap type="array"></excludeMap>
 		<softrefCfg type="array"></softrefCfg>
 		<extensionDependencies type="array">
