@@ -6,9 +6,9 @@
 			<title>Aimeos Distribution Package 2020.10</title>
 			<description>Export settings for creating the Aimeos 2020.10 Distribution package.</description>
 			<notes></notes>
-			<packager_username>rowild</packager_username>
+			<packager_username>aimeos</packager_username>
 			<packager_name></packager_name>
-			<packager_email>robertwildling@gmail.com</packager_email>
+			<packager_email>aimeos@aimeos.org</packager_email>
 			<TYPO3_version>10.4.10</TYPO3_version>
 			<created>Wednesday 25. November 2020</created>
 		</meta>
@@ -18,22 +18,13 @@
 		<excludeMap type="array"></excludeMap>
 		<softrefCfg type="array"></softrefCfg>
 		<extensionDependencies type="array">
-			<extkey index="0">core</extkey>
 			<extkey index="1">scheduler</extkey>
-			<extkey index="2">extbase</extkey>
-			<extkey index="3">frontend</extkey>
-			<extkey index="4">impexp</extkey>
-			<extkey index="5">recordlist</extkey>
-			<extkey index="6">backend</extkey>
-			<extkey index="7">beuser</extkey>
 			<extkey index="8">extensionmanager</extkey>
 			<extkey index="9">felogin</extkey>
-			<extkey index="10">tstemplate</extkey>
 			<extkey index="11">pdfviewhelpers</extkey>
 			<extkey index="12">static_info_tables</extkey>
 			<extkey index="13">aimeos</extkey>
 			<extkey index="14">bootstrap_package</extkey>
-			<extkey index="15">aimeos_dist</extkey>
 		</extensionDependencies>
 		<charset>utf-8</charset>
 		<pagetree type="array">
@@ -832,7 +823,7 @@
 				<rec index="5" type="array">
 					<uid>5</uid>
 					<pid>3</pid>
-					<title>customer_1@example.com</title>
+					<title>customer@example.com</title>
 					<relations index="rels" type="array">
 						<element index="fe_groups:3" type="array">
 							<id>3</id>
@@ -1923,8 +1914,8 @@ tt_content.list.layoutRootPaths &gt;
 				<field index="endtime" type="integer">0</field>
 				<field index="description" type="NULL"></field>
 				<field index="tx_extbase_type">0</field>
-				<field index="username">customer_1@example.com</field>
-				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$TjM3UVBuenZuUTFDdHBmaQ$aDnlm9ZL6wu5CTNN3gahdxDBLU/6ggo7cfw2grSWVs8</field>
+				<field index="username">customer@example.com</field>
+				<field index="password">$argon2i$v=19$m=65536,t=16,p=1$MktpT2xxWHYvNS5zLjRBRw$ThXoFCsrV7wvVL1hXWknhYHlrR0iYRfdSju51ds+TaI</field>
 				<field index="usergroup">3</field>
 				<field index="name">Test user</field>
 				<field index="first_name">Test</field>
@@ -1933,7 +1924,7 @@ tt_content.list.layoutRootPaths &gt;
 				<field index="address">Test street 1</field>
 				<field index="telephone"></field>
 				<field index="fax"></field>
-				<field index="email">demo@example.com</field>
+				<field index="email">customer@example.com</field>
 				<field index="lockToDomain"></field>
 				<field index="uc" type="NULL"></field>
 				<field index="title"></field>

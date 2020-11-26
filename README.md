@@ -12,7 +12,7 @@ handling the checkout process and all e-mail handling for notifying the customer
 **Table of contents**
 - [Aimeos online shop distribution for TYPO3](#aimeos-online-shop-distribution-for-typo3)
   - [Installation](#installation)
-  - [From TER](#from-ter)
+    - [From TER](#from-ter)
     - [Composer](#composer)
   - [Troubleshooting](#troubleshooting)
   - [Customize your Aimeos distribution](#customize-your-aimeos-distribution)
@@ -21,7 +21,7 @@ handling the checkout process and all e-mail handling for notifying the customer
 
 ## Installation
 
-## From TER
+### From TER
 
 For non-composer installations, you can install the Aimeos distribution using the
 Extension manager. You can choose Aimeos from the list of available distributions:
@@ -29,9 +29,12 @@ Extension manager. You can choose Aimeos from the list of available distribution
 ![TYPO3 distributions](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-typo3-dist-install.png)
 
 Alternatively, you can download the [Aimeos TYPO3 distribution](https://extensions.typo3.org/extension/aimeos_dist/)
-package from the TER:
+package from the TER and use the Extension Manager to install it manually.
 
-![TYPO3 extension repository:](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-typo3-dist-install.png)
+**Important** 
+Since the *Aimeos Distribution* needs to find dependencies, make sure to first update the 
+extension list first, especially when you are starting anew with a completely fresh TYPO3 
+installation.
 
 ### Composer
 
@@ -87,7 +90,8 @@ Then activate the extensions and update the database:
 ```
 
 Now your Aimeos installation is complete and you can check the frontend and log into
-the TYPO3 backend.
+the TYPO3 backend. If you want to check, if you can login to the account of the newly 
+created *customer@example.com*, use *12341234* as password (and change it right away).
 
 ## Troubleshooting
 
