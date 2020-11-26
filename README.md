@@ -32,7 +32,7 @@ Alternatively, you can download the [Aimeos TYPO3 distribution](https://extensio
 package from the TER and use the Extension Manager to install it manually.
 
 **Important**  
-Since the *Aimeos Distribution* needs to find dependencies, make sure to first update the 
+Since the *Aimeos Distribution* needs to find dependencies, make sure to populate/update the 
 extension list first, especially when you are starting anew with a completely fresh TYPO3 
 installation.
 
@@ -90,15 +90,14 @@ Then activate the extensions and update the database:
 ```
 
 Now your Aimeos installation is complete and you can check the frontend and log into
-the TYPO3 backend. If you want to check, if you can login to the account of the newly 
-created *customer@example.com*,  (and change it right away).
+the TYPO3 backend.
 
 ## Troubleshooting
 
 - In case there is no page tree, go to the extension manager and un-/reinstall aimeos_dist and aimeos.
 - In case there are no products, go to the extension manager and click on the Aimeos update script.
 - To check the login functionality, use *12341234* as password or assign a new password to *customer@example.com*!
-- If you come from the *aimeos_dist v2019*, please be aware that the previous page *My account* is now called *Profile*. Accordingly, the typoscript constant `tx_aimeos.myaccount` has been renamed to `tx_aimeos.profile`.
+- If you come from the *aimeos_dist v2019*, please be aware that the previous page *My account* is now called *Profile*. Accordingly, the typoscript constant `tx_aimeos.myaccount.target` has been renamed to `tx_aimeos.profile.target` in *Configuration/TypoScript/constants.txt*.
 
 ## Customize your Aimeos distribution
 
