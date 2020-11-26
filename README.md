@@ -91,13 +91,14 @@ Then activate the extensions and update the database:
 
 Now your Aimeos installation is complete and you can check the frontend and log into
 the TYPO3 backend. If you want to check, if you can login to the account of the newly 
-created *customer@example.com*, use *12341234* as password (and change it right away).
+created *customer@example.com*,  (and change it right away).
 
 ## Troubleshooting
 
 - In case there is no page tree, go to the extension manager and un-/reinstall aimeos_dist and aimeos.
 - In case there are no products, go to the extension manager and click on the Aimeos update script.
-- To check the login functionality, you first need to assign a password to *customer_1@example.com*!
+- To check the login functionality, use *12341234* as password or assign a new password to *customer@example.com*!
+- If you come from the *aimeos_dist v2019*, please be aware that the previous page *My account* is now called *Profile*. Accordingly, the typoscript constant `tx_aimeos.myaccount` has been renamed to `tx_aimeos.profile`.
 
 ## Customize your Aimeos distribution
 
