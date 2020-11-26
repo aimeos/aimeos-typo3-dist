@@ -31,7 +31,7 @@ Extension manager. You can choose Aimeos from the list of available distribution
 Alternatively, you can download the [Aimeos TYPO3 distribution](https://extensions.typo3.org/extension/aimeos_dist/)
 package from the TER and use the Extension Manager to install it manually.
 
-**Important** 
+**Important**  
 Since the *Aimeos Distribution* needs to find dependencies, make sure to first update the 
 extension list first, especially when you are starting anew with a completely fresh TYPO3 
 installation.
