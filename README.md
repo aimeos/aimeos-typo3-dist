@@ -103,7 +103,7 @@ to your MySQL / Maria database (use phpmyadmin or a similar tool, but not TYPO3)
 you will find a preset option in the *File & Preset* tab of the Import-Export manager. Select and
 load it, save it under a new name, then make your changes.
 
-![File & Preset](./Documentation/Images/Aimeos-imp-exp-settings.png)
+![File & Preset](./Documentation/Images/Aimeos-imp-exp-settings.jpg)
 
 Read more about creating a TYPO3 distribution at the [TYPO3 Documentation](https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ExtensionArchitecture/CreateNewDistribution/Index.html).
 
