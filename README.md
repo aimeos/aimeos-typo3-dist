@@ -58,9 +58,8 @@ php -S 127.0.0.1:8000 -t public
 ```
 
 and open the URL ("http://127.0.0.1:8000") in your web browser. If you use Apache or
-another web server, head over directly to the URL your installation is reachable directly
-without starting the PHP wev server. Complete the TYPO3 setup process before you continue
-to install the Aimeos distribution.
+another web server instead, head over to the URL your installation is reachable at.
+Complete the TYPO3 setup process before you continue to install the Aimeos distribution.
 
 Then you need to add this to your `composer.json` file in the root application directory:
 
@@ -73,7 +72,8 @@ Then you need to add this to your `composer.json` file in the root application d
             "Aimeos\\Aimeos\\Custom\\Composer::install"
         ],
         ...
-}```
+}
+```
 
 Install the Aimeos distribution for TYPO3 via command line:
 
