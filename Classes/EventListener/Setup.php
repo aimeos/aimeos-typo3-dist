@@ -68,6 +68,20 @@ class Setup
 			$data .= 'tx_aimeos.basket.target = ' . intval( $record['uid'] ) . "\n";
 		}
 
+		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Profile' ) );
+		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+
+		while( $record = $stmt->fetch() ) {
+			$data .= 'tx_aimeos.profile.target = ' . intval( $record['uid'] ) . "\n";
+		}
+
+		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'jsonapi' ) );
+		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+
+		while( $record = $stmt->fetch() ) {
+			$data .= 'tx_aimeos.jsonapi.target = ' . intval( $record['uid'] ) . "\n";
+		}
+
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Users' ) );
 		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
 
@@ -75,11 +89,13 @@ class Setup
 			$data .= 'tx_aimeos.customer.pid = ' . intval( $record['uid'] ) . "\n";
 		}
 
-		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Profile' ) );
-		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+		$q = GeneralUtility::makeInstance( ConnectionPool::class )->getQueryBuilderForTable( 'fe_groups' );
+
+		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'customers' ) );
+		$stmt = $q->select( 'uid' )->from( 'fe_groups' )->where( $expr )->execute();
 
 		while( $record = $stmt->fetch() ) {
-			$data .= 'tx_aimeos.profile.target = ' . intval( $record['uid'] ) . "\n";
+			$data .= 'tx_aimeos.customer.groupid = ' . intval( $record['uid'] ) . "\n";
 		}
 
 		GeneralUtility::writeFile( $filename, $data );
