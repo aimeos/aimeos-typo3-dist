@@ -40,7 +40,8 @@ to install the required TYPO3 packages. Afterwards, you have to create the
 `FIRST_INSTALL` file to be able to run the setup process:
 
 ```bash
-touch ./public/FIRST_INSTALL
+cd myshop
+touch public/FIRST_INSTALL
 ```
 
 For local installations, you can fire up the internal PHP web server
