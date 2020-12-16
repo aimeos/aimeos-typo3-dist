@@ -26,9 +26,7 @@ Extension manager. You can choose Aimeos from the list of available distribution
 ![TYPO3 distributions](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-typo3-dist-install.png)
 
 Alternatively, you can download the [Aimeos TYPO3 distribution](https://extensions.typo3.org/extension/aimeos_dist/)
-package from the TER:
-
-![TYPO3 extension repository:](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-typo3-dist-install.png)
+package from the TER.
 
 ### Composer
 
@@ -67,9 +65,10 @@ Then, you need to add this to your `composer.json` file in the root application 
             "Aimeos\\Aimeos\\Custom\\Composer::install"
         ],
         ...
-}```
+}
+```
 
-Install the Aimeos distribution for TYPO3 via command line:
+Now install the Aimeos distribution for TYPO3 via command line. Due to conflicts with the *composer/installers* package, installation is only possible using **composer 1.x**!
 
 ```bash
 composer req aimeos/aimeos_dist
