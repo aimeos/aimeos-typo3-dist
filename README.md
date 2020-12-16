@@ -46,7 +46,7 @@ touch ./public/FIRST_INSTALL
 For local installations, you can fire up the internal PHP web server
 
 ```bash
-php -S 127.0.0.1:8000 -t public
+php -d memory_limit=256M -d max_execution_time=240 -d max_input_vars=1500 -S 127.0.0.1:8000 -t public
 ```
 
 and open the URL ("http://127.0.0.1:8000") in your web browser. If you use Apache or
