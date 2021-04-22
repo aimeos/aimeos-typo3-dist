@@ -54,6 +54,7 @@ routeEnhancers:
       - { routePath: '/l/{f_sort}', _controller: 'Catalog::list' }
       - { routePath: '/b/{b_action}', _controller: 'Basket::index' }
       - { routePath: '/co/{c_step}', _controller: 'Checkout::index' }
+      - { routePath: '/s/{s_name}/{f_supid}', _controller: 'Supplier::detail' }
     defaults:
       b_action: ''
       c_step: ''
