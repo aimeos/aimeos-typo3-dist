@@ -30,6 +30,8 @@ package from the TER.
 
 ### Composer
 
+**Note:** Currently, only composer 1.x can be used to install Aimeos for TYPO3 due a version conflict in the TYPO3 composer installer plugin!
+
 To install TYPO3 via composer, execute this at the command line
 
 ```bash
@@ -69,7 +71,7 @@ Then, you need to add this to your `composer.json` file in the root application 
 }
 ```
 
-Now install the Aimeos distribution for TYPO3 via command line. Due to conflicts with the *composer/installers* package, installation is only possible using **composer 1.x**!
+Now install the Aimeos distribution for TYPO3 via command line:
 
 ```bash
 composer req aimeos/aimeos_dist
