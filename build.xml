@@ -12,7 +12,7 @@
 		    </replaceregexp>
 		  </filterchain>
 		</reflexive>
-		<exec command="zip -r ../aimeos_dist_${version}.zip * -x \*.git\*" checkreturn="true" logoutput="true"/>
+		<exec command="zip -r ../aimeos_dist_${version}.zip * -x \*.git\* public/\* vendor/\*" checkreturn="true" logoutput="true"/>
 		<filehash file="../aimeos_dist_${version}.zip" hashtype="1" />
 		<echo msg="SHA1 hash value: ${filehashvalue}" />
 	</target>
