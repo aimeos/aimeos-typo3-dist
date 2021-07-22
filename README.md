@@ -30,12 +30,14 @@ package from the TER.
 
 ### Composer
 
-**Note:** Currently, only composer 1.x can be used to install Aimeos for TYPO3 due a version conflict in the TYPO3 composer installer plugin!
+**Note:** You need *composer 2.1+* to install the latest version of Aimeos. For 20.10 LTS
+and before, composer 1.x is required.
 
 To install TYPO3 via composer, execute this at the command line
 
 ```bash
-composer create-project "typo3/cms-base-distribution:^10.4" myshop
+wget https://getcomposer.org/download/latest-stable/composer.phar -O composer
+php composer create-project "typo3/cms-base-distribution:^10.4" myshop
 ```
 
 to install the required TYPO3 packages. Afterwards, you have to create the
@@ -57,7 +59,7 @@ another web server, head over directly to the URL your installation is reachable
 without starting the PHP wev server. Complete the TYPO3 setup process before you continue
 to install the Aimeos distribution.
 
-Then, you need to add this to your `composer.json` file in the root application directory:
+Up to 20.10 LTS, you need to add this to your `composer.json` file in the root application directory:
 
 ```json
     "scripts": {
@@ -71,7 +73,7 @@ Then, you need to add this to your `composer.json` file in the root application 
 }
 ```
 
-Now install the Aimeos distribution for TYPO3 via command line:
+For version 21.7 and later this isn't necessary any more. Now install the Aimeos distribution for TYPO3 via command line:
 
 ```bash
 composer req aimeos/aimeos_dist
