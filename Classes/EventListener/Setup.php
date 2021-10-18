@@ -2,7 +2,7 @@
 
 /**
  * @license GPLv3, http://www.gnu.org/copyleft/gpl.html
- * @copyright Aimeos (aimeos.org), 2015-2020
+ * @copyright Aimeos (aimeos.org), 2015-2021
  * @package TYPO3_Aimeos
  */
 
@@ -28,6 +28,7 @@ class Setup
 	 */
 	public function __invoke( AfterExtensionFilesHaveBeenImportedEvent $event ) : void
 	{
+error_log( __METHOD__ . ': ' . $event->getPackageKey() );
 		if( $event->getPackageKey() === 'aimeos_dist' ) {
 			$this->createTypoScriptConstants();
 		}
