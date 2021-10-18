@@ -28,26 +28,9 @@ class Setup
 	 */
 	public function __invoke( AfterExtensionFilesHaveBeenImportedEvent $event ) : void
 	{
-		if( $event->getPackageKey() !== 'aimeos_dist' ) {
-			return;
+		if( $event->getPackageKey() === 'aimeos_dist' ) {
+			$this->createTypoScriptConstants();
 		}
-
-		// $this->createTypoScriptConstants();
-	}
-
-
-	/**
-	 * Executes the setup tasks if extension is installed.
-	 *
-	 * @param string|null $extname Installed extension name
-	 */
-	public function process( string $extname = null )
-	{
-		if( $extname !== 'aimeos_dist' ) {
-			return;
-		}
-
-		$this->createTypoScriptConstants();
 	}
 
 
