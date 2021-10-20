@@ -47,37 +47,41 @@ error_log( __METHOD__ );
 		$q = GeneralUtility::makeInstance( ConnectionPool::class )->getQueryBuilderForTable( 'pages' );
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Basket' ) );
-		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr );
 error_log( 'Basket: ' . $stmt->getWrappedStatement()->debugDumpParams() );
+		$result = $stmt->execute();
 
-		while( $record = $stmt->fetch() ) {
+		while( $record = $result->fetch() ) {
 error_log( print_r( $record, true ) );
 			$data .= 'tx_aimeos.basket.target = ' . intval( $record['uid'] ) . "\n";
 		}
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Profile' ) );
-		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr );
 error_log( 'Profile: ' . $stmt->getWrappedStatement()->debugDumpParams() );
+		$result = $stmt->execute();
 
-		while( $record = $stmt->fetch() ) {
+		while( $record = $result->fetch() ) {
 error_log( print_r( $record, true ) );
 			$data .= 'tx_aimeos.profile.target = ' . intval( $record['uid'] ) . "\n";
 		}
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'jsonapi' ) );
-		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr );
 error_log( 'jsonapi: ' . $stmt->getWrappedStatement()->debugDumpParams() );
+		$result = $stmt->execute();
 
-		while( $record = $stmt->fetch() ) {
+		while( $record = $result->fetch() ) {
 error_log( print_r( $record, true ) );
 			$data .= 'tx_aimeos.jsonapi.target = ' . intval( $record['uid'] ) . "\n";
 		}
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Users' ) );
-		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr );
 error_log( 'Users: ' . $stmt->getWrappedStatement()->debugDumpParams() );
+		$result = $stmt->execute();
 
-		while( $record = $stmt->fetch() ) {
+		while( $record = $result->fetch() ) {
 error_log( print_r( $record, true ) );
 			$data .= 'tx_aimeos.customer.pid = ' . intval( $record['uid'] ) . "\n";
 		}
@@ -85,10 +89,11 @@ error_log( print_r( $record, true ) );
 		$q = GeneralUtility::makeInstance( ConnectionPool::class )->getQueryBuilderForTable( 'fe_groups' );
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'customers' ) );
-		$stmt = $q->select( 'uid' )->from( 'fe_groups' )->where( $expr )->execute();
+		$stmt = $q->select( 'uid' )->from( 'fe_groups' )->where( $expr );
 error_log( 'customers: ' . $stmt->getWrappedStatement()->debugDumpParams() );
+		$result = $stmt->execute();
 
-		while( $record = $stmt->fetch() ) {
+		while( $record = $result->fetch() ) {
 error_log( print_r( $record, true ) );
 			$data .= 'tx_aimeos.customer.groupid = ' . intval( $record['uid'] ) . "\n";
 		}
