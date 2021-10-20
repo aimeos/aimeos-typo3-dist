@@ -7,4 +7,4 @@ services:
         event: TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent
       - name: event.listener
         identifier: 'aimeosImport'
-        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent
+        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionDatabaseContentHasBeenImportedEvent
