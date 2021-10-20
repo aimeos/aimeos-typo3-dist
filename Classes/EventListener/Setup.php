@@ -24,9 +24,9 @@ class Setup
 	/**
 	 * Executes the setup tasks if extension is installed.
 	 *
-	 * @param AfterExtensionFilesHaveBeenImportedEvent $event Event object
+	 * @param AfterExtensionDatabaseContentHasBeenImportedEvent $event Event object
 	 */
-	public function __invoke( AfterExtensionFilesHaveBeenImportedEvent $event ) : void
+	public function __invoke( AfterExtensionDatabaseContentHasBeenImportedEvent $event ) : void
 	{
 error_log( __METHOD__ . ': ' . $event->getPackageKey() );
 		if( $event->getPackageKey() === 'aimeos_dist' ) {
