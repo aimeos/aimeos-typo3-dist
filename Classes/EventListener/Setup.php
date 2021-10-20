@@ -2,7 +2,7 @@
 
 /**
  * @license GPLv3, http://www.gnu.org/copyleft/gpl.html
- * @copyright Aimeos (aimeos.org), 2015-2020
+ * @copyright Aimeos (aimeos.org), 2015-2021
  * @package TYPO3_Aimeos
  */
 
@@ -11,7 +11,7 @@ namespace Aimeos\AimeosDist\EventListener;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
+use TYPO3\CMS\Extensionmanager\Event\AfterExtensionDatabaseContentHasBeenImportedEvent;
 
 
 /**
@@ -24,9 +24,9 @@ class Setup
 	/**
 	 * Executes the setup tasks if extension is installed.
 	 *
-	 * @param AfterExtensionFilesHaveBeenImportedEvent $event Event object
+	 * @param AfterExtensionDatabaseContentHasBeenImportedEvent $event Event object
 	 */
-	public function __invoke( AfterExtensionFilesHaveBeenImportedEvent $event ) : void
+	public function __invoke( AfterExtensionDatabaseContentHasBeenImportedEvent $event ) : void
 	{
 		if( $event->getPackageKey() === 'aimeos_dist' ) {
 			$this->createTypoScriptConstants();

@@ -2,5 +2,5 @@ services:
   Aimeos\AimeosDist\EventListener\Setup:
     tags:
       - name: event.listener
-        identifier: 'aimeos.import'
-        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent
+        identifier: 'aimeosImport'
+        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionDatabaseContentHasBeenImportedEvent
