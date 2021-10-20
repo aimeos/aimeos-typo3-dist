@@ -40,6 +40,7 @@ error_log( __METHOD__ . ': ' . $event->getPackageKey() );
 	 */
 	protected function createTypoScriptConstants()
 	{
+error_log( __METHOD__ );
 		$data = '';
 		$ds = DIRECTORY_SEPARATOR;
 		$filename = dirname( __DIR__, 2 ) . $ds . 'Configuration' . $ds . 'TypoScript' . $ds . 'constants.txt';
@@ -47,29 +48,37 @@ error_log( __METHOD__ . ': ' . $event->getPackageKey() );
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Basket' ) );
 		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+error_log( 'Basket: ' . $stmt->getWrappedStatement()->debugDumpParams() );
 
 		while( $record = $stmt->fetch() ) {
+error_log( print_r( $record, true ) );
 			$data .= 'tx_aimeos.basket.target = ' . intval( $record['uid'] ) . "\n";
 		}
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Profile' ) );
 		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+error_log( 'Profile: ' . $stmt->getWrappedStatement()->debugDumpParams() );
 
 		while( $record = $stmt->fetch() ) {
+error_log( print_r( $record, true ) );
 			$data .= 'tx_aimeos.profile.target = ' . intval( $record['uid'] ) . "\n";
 		}
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'jsonapi' ) );
 		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+error_log( 'jsonapi: ' . $stmt->getWrappedStatement()->debugDumpParams() );
 
 		while( $record = $stmt->fetch() ) {
+error_log( print_r( $record, true ) );
 			$data .= 'tx_aimeos.jsonapi.target = ' . intval( $record['uid'] ) . "\n";
 		}
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Users' ) );
 		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+error_log( 'Users: ' . $stmt->getWrappedStatement()->debugDumpParams() );
 
 		while( $record = $stmt->fetch() ) {
+error_log( print_r( $record, true ) );
 			$data .= 'tx_aimeos.customer.pid = ' . intval( $record['uid'] ) . "\n";
 		}
 
@@ -77,10 +86,14 @@ error_log( __METHOD__ . ': ' . $event->getPackageKey() );
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'customers' ) );
 		$stmt = $q->select( 'uid' )->from( 'fe_groups' )->where( $expr )->execute();
+error_log( 'customers: ' . $stmt->getWrappedStatement()->debugDumpParams() );
 
 		while( $record = $stmt->fetch() ) {
+error_log( print_r( $record, true ) );
 			$data .= 'tx_aimeos.customer.groupid = ' . intval( $record['uid'] ) . "\n";
 		}
+error_log( $filename );
+error_log( $data );
 
 		GeneralUtility::writeFile( $filename, $data );
 	}
