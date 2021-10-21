@@ -30,14 +30,13 @@ package from the TER.
 
 ### Composer
 
-**Note:** You need *composer 2.1+* to install the latest version of Aimeos. For 20.10 LTS
-and before, composer 1.x is required.
+**Note:** You need *composer 2.1+* to install the latest version of Aimeos.
 
 To install TYPO3 via composer, execute this at the command line
 
 ```bash
 wget https://getcomposer.org/download/latest-stable/composer.phar -O composer
-php composer create-project "typo3/cms-base-distribution:^10.4" myshop
+php composer create-project "typo3/cms-base-distribution:^11.5" myshop
 ```
 
 to install the required TYPO3 packages. Afterwards, you have to create the
@@ -59,21 +58,7 @@ another web server, head over directly to the URL your installation is reachable
 without starting the PHP wev server. Complete the TYPO3 setup process before you continue
 to install the Aimeos distribution.
 
-Up to 20.10 LTS, you need to add this to your `composer.json` file in the root application directory:
-
-```json
-    "scripts": {
-        "post-install-cmd": [
-            "Aimeos\\Aimeos\\Custom\\Composer::install"
-        ],
-        "post-update-cmd": [
-            "Aimeos\\Aimeos\\Custom\\Composer::install"
-        ],
-        ...
-}
-```
-
-For version 21.7 and later this isn't necessary any more. Now install the Aimeos distribution for TYPO3 via command line:
+Now install the Aimeos distribution for TYPO3 via command line:
 
 ```bash
 composer req aimeos/aimeos_dist
@@ -82,13 +67,13 @@ composer req aimeos/aimeos_dist
 Then, activate the extensions and update the database:
 
 ```bash
-./vendor/bin/typo3 extension:activate scheduler
-./vendor/bin/typo3 extension:activate aimeos
-./vendor/bin/typo3 extension:activate aimeos_dist
+./vendor/bin/typo3 extension:setup
+./vendor/bin/typo3 aimeos:setup --option=setup/default/demo:1
 ```
 
-Now, your Aimeos installation is complete and you can check the frontend and log into
-the TYPO3 backend.
+If you don't want to import the demo data, leave out `--option=setup/default/demo:1`.
+Afterwards, your Aimeos installation is complete and you can check the frontend and
+log into the TYPO3 backend.
 
 ## License
 
