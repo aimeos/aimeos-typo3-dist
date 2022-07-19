@@ -18,7 +18,7 @@
 		"composer-runtime-api": "^2.1",
 		"typo3/cms-core": "~11.5",
 		"bk2k/bootstrap-package": "~12.0",
-		"aimeos/aimeos-typo3": "dev-master"
+		"aimeos/aimeos-typo3": "~22.7||2022.07.x-dev"
 	},
 	"autoload": {
 		"classmap": ["Classes"],
