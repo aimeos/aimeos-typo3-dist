@@ -48,7 +48,7 @@ routeEnhancers:
       - { routePath: '/c/{f_name}~{f_catid}', _controller: 'Catalog::list' }
       - { routePath: '/t/{f_name}~{f_catid}', _controller: 'Catalog::tree' }
       - { routePath: '/p/{d_name}/{d_prodid}/{d_pos}', _controller: 'Catalog::detail' }
-      - { routePath: '/d/{d_name}/{d_pos}', _controller: 'Catalog::detail' }
+      - { routePath: '/d/{d_name}/{d_pos}/{productId}', _controller: 'Catalog::detail' }
       - { routePath: '/lt/{l_type}', _controller: 'Catalog::list' }
       - { routePath: '/lp/{l_page}', _controller: 'Catalog::list' }
       - { routePath: '/ls/{f_sort}/{l_page}', _controller: 'Catalog::list' }
