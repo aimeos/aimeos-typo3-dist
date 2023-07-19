@@ -43,29 +43,29 @@ class Setup
 		$q = GeneralUtility::makeInstance( ConnectionPool::class )->getQueryBuilderForTable( 'pages' );
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'My Shop' ) );
-		$pid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute()->fetchOne();
+		$pid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->executeQuery()->fetchOne();
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Basket' ) );
-		$uid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute()->fetchOne();
+		$uid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->executeQuery()->fetchOne();
 		$data .= 'tx_aimeos.basket.target = ' . intval( $uid ) . "\n";
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Profile' ) );
-		$uid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute()->fetchOne();
+		$uid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->executeQuery()->fetchOne();
 		$data .= 'tx_aimeos.profile.target = ' . intval( $uid ) . "\n";
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'jsonapi' ) );
-		$uid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute()->fetchOne();
+		$uid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->executeQuery()->fetchOne();
 		$data .= 'tx_aimeos.jsonapi.target = ' . intval( $uid ) . "\n";
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Users' ) );
-		$uid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute()->fetchOne();
+		$uid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->executeQuery()->fetchOne();
 		$data .= 'tx_aimeos.customer.pid = ' . intval( $uid ) . "\n";
 
 
 		$q = GeneralUtility::makeInstance( ConnectionPool::class )->getQueryBuilderForTable( 'fe_groups' );
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'customers' ) );
-		$uid = $q->select( 'uid' )->from( 'fe_groups' )->where( $expr )->execute()->fetchOne();
+		$uid = $q->select( 'uid' )->from( 'fe_groups' )->where( $expr )->executeQuery()->fetchOne();
 		$data .= 'tx_aimeos.customer.groupid = ' . intval( $uid ) . "\n";
 
 
@@ -76,6 +76,7 @@ class Setup
 
 		$q->update( 'sys_template' )
 			->where( $q->expr()->eq( 'pid', $q->createNamedParameter( $pid ) ) )
-			->set( 'constants', $data . "\n" . $constants );
+			->set( 'constants', $data . "\n" . $constants )
+			->executeStatement();
 	}
 }
