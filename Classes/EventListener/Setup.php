@@ -35,52 +35,45 @@ class Setup
 
 
 	/**
-	 * Creates the TypoScript constants.txt file with necessary page IDs
+	 * Creates the TypoScript constants with necessary page IDs
 	 */
 	protected function createTypoScriptConstants()
 	{
 		$data = '';
-		$ds = DIRECTORY_SEPARATOR;
-		$filename = dirname( __DIR__, 2 ) . $ds . 'Configuration' . $ds . 'TypoScript' . $ds . 'constants.txt';
 		$q = GeneralUtility::makeInstance( ConnectionPool::class )->getQueryBuilderForTable( 'pages' );
 
-		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Basket' ) );
-		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'My Shop' ) );
+		$pid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute()->fetchOne();
 
-		while( $record = $stmt->fetch() ) {
-			$data .= 'tx_aimeos.basket.target = ' . intval( $record['uid'] ) . "\n";
-		}
+		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Basket' ) );
+		$uid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute()->fetchOne();
+		$data .= 'tx_aimeos.basket.target = ' . intval( $uid ) . "\n";
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Profile' ) );
-		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
-
-		while( $record = $stmt->fetch() ) {
-			$data .= 'tx_aimeos.profile.target = ' . intval( $record['uid'] ) . "\n";
-		}
+		$uid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute()->fetchOne();
+		$data .= 'tx_aimeos.profile.target = ' . intval( $uid ) . "\n";
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'jsonapi' ) );
-		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
-
-		while( $record = $stmt->fetch() ) {
-			$data .= 'tx_aimeos.jsonapi.target = ' . intval( $record['uid'] ) . "\n";
-		}
+		$uid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute()->fetchOne();
+		$data .= 'tx_aimeos.jsonapi.target = ' . intval( $uid ) . "\n";
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'Users' ) );
-		$stmt = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute();
+		$uid = $q->select( 'uid' )->from( 'pages' )->where( $expr )->execute()->fetchOne();
+		$data .= 'tx_aimeos.customer.pid = ' . intval( $uid ) . "\n";
 
-		while( $record = $stmt->fetch() ) {
-			$data .= 'tx_aimeos.customer.pid = ' . intval( $record['uid'] ) . "\n";
-		}
 
 		$q = GeneralUtility::makeInstance( ConnectionPool::class )->getQueryBuilderForTable( 'fe_groups' );
 
 		$expr = $q->expr()->eq( 'title', $q->createNamedParameter( 'customers' ) );
-		$stmt = $q->select( 'uid' )->from( 'fe_groups' )->where( $expr )->execute();
+		$uid = $q->select( 'uid' )->from( 'fe_groups' )->where( $expr )->execute()->fetchOne();
+		$data .= 'tx_aimeos.customer.groupid = ' . intval( $uid ) . "\n";
 
-		while( $record = $stmt->fetch() ) {
-			$data .= 'tx_aimeos.customer.groupid = ' . intval( $record['uid'] ) . "\n";
-		}
 
-		GeneralUtility::writeFile( $filename, $data );
+		$q = GeneralUtility::makeInstance( ConnectionPool::class )->getQueryBuilderForTable( 'sys_template' );
+
+		$expr = $q->expr()->eq( 'pid', $q->createNamedParameter( $pid ) );
+		$constants = $q->select( 'constants' )->from( 'sys_template' )->where( $expr )->execute()->fetchOne();
+
+		$q->update( 'sys_template', ['constants' => $data . "\n" . $constants], ['pid' => $pid] );
 	}
 }
