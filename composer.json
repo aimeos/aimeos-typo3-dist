@@ -16,9 +16,9 @@
 	"require": {
 		"php": "^8.0.11",
 		"composer-runtime-api": "^2.1",
-		"typo3/cms-core": "^12.3",
-		"bk2k/bootstrap-package": "^13.0",
-		"aimeos/aimeos-typo3": "dev-master"
+		"typo3/cms-core": "^12.4",
+		"bk2k/bootstrap-package": "^14.0",
+		"aimeos/aimeos-typo3": "^23.7||dev-master"
 	},
 	"autoload": {
 		"classmap": ["Classes"],
