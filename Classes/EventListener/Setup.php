@@ -74,6 +74,8 @@ class Setup
 		$expr = $q->expr()->eq( 'pid', $q->createNamedParameter( $pid ) );
 		$constants = $q->select( 'constants' )->from( 'sys_template' )->where( $expr )->execute()->fetchOne();
 
-		$q->update( 'sys_template', ['constants' => $data . "\n" . $constants], ['pid' => $pid] );
+		$q->update( 'sys_template' )
+			->where( $q->expr()->eq( 'pid', $q->createNamedParameter( $pid ) ) )
+			->set( 'constants', $data . "\n" . $constants );
 	}
 }
