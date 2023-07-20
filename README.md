@@ -61,7 +61,7 @@ to install the Aimeos distribution.
 Now install the Aimeos distribution for TYPO3 via command line:
 
 ```bash
-composer req aimeos/aimeos_dist
+composer req -W aimeos/aimeos_dist
 ```
 
 Then, activate the extensions and update the database:
