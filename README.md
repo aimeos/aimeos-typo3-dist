@@ -36,7 +36,7 @@ To install TYPO3 via composer, execute this at the command line
 
 ```bash
 wget https://getcomposer.org/download/latest-stable/composer.phar -O composer
-php composer create-project "typo3/cms-base-distribution:^11.5" myshop
+php composer create-project "typo3/cms-base-distribution:^12.4" myshop
 ```
 
 to install the required TYPO3 packages. Afterwards, you have to create the
