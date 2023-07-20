@@ -1,3 +1,0 @@
-#tx_aimeos.profile.target = <my account page ID>
-#tx_aimeos.basket.target = <basket page ID>
-#tx_aimeos.customer.pid = <page ID of user sysfolder>
