@@ -14,11 +14,11 @@
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"require": {
-		"php": "^8.0.11",
-		"composer-runtime-api": "^2.1",
+		"php": "^8.1",
+		"composer-runtime-api": "^2.2",
 		"typo3/cms-core": "^12.4",
 		"bk2k/bootstrap-package": "^14.0",
-		"aimeos/aimeos-typo3": "^23.7||dev-master"
+		"aimeos/aimeos-typo3": "^24.4||dev-master"
 	},
 	"autoload": {
 		"classmap": ["Classes"],
