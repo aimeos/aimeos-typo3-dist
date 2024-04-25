@@ -30,7 +30,7 @@ package from the TER.
 
 ### Composer
 
-**Note:** You need *composer 2.1+* to install the latest version of Aimeos.
+**Note:** You need *composer 2.2+* to install the latest version of Aimeos.
 
 To install TYPO3 via composer, execute this at the command line
 
