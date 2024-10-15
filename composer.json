@@ -16,9 +16,15 @@
 	"require": {
 		"php": "^8.1",
 		"composer-runtime-api": "^2.2",
+<<<<<<< Updated upstream
 		"typo3/cms-core": "^12.4",
 		"bk2k/bootstrap-package": "^14.0",
 		"aimeos/aimeos-typo3": "dev-master"
+=======
+		"typo3/cms-core": "^12.4||^13.4",
+		"bk2k/bootstrap-package": "^14.0||^15.0",
+		"aimeos/aimeos-typo3": "24.*||2024.*"
+>>>>>>> Stashed changes
 	},
 	"autoload": {
 		"classmap": ["Classes"],
