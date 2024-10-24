@@ -11,7 +11,7 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Aimeos web shop distribution',
+	'title' => 'Aimeos shop distribution',
 	'description' => 'Professional, full-featured and ultra-fast TYPO3 e-commerce distribution for online shops, complex B2B applications and #gigacommerce. Turns TYPO3 into the best platform for content commerce and your e-commerce requirements',
 	'category' => 'distribution',
 	'author' => 'Aimeos',
@@ -21,7 +21,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '23.4.1-dev',
+	'version' => '24.10.1',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '12.4.0-13.99.99',
