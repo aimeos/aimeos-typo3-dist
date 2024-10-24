@@ -24,9 +24,9 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '23.4.1-dev',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '12.4.0-12.99.99',
-			'bootstrap_package' => '14.0.0-14.99.99',
-			'aimeos' => '23.7.0-23.10.99',
+			'typo3' => '12.4.0-13.99.99',
+			'bootstrap_package' => '14.0.0-15.99.99',
+			'aimeos' => '24.10.0-24.10.99',
 		),
 		'conflicts' => array(
 		),
