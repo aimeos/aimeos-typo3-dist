@@ -11,6 +11,13 @@
 		"forum": "https://aimeos.org/help",
 		"wiki": "https://aimeos.org/docs"
 	},
+	"repositories": [{
+		"type": "composer",
+		"url": "https://packages.aimeos.org/aimeoscom"
+	}, {
+		"type": "path",
+		"url": "packages/*"
+	}],
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"require": {
