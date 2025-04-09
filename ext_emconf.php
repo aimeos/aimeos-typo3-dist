@@ -21,12 +21,12 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '24.10.0-dev',
+	'version' => '25.4.1',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '12.4.0-13.99.99',
 			'bootstrap_package' => '14.0.0-15.99.99',
-			'aimeos' => '24.10.0-24.10.99',
+			'aimeos' => '25.4.0-25.10.99',
 		),
 		'conflicts' => array(
 		),
