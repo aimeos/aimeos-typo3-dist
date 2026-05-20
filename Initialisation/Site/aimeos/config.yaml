@@ -7,7 +7,7 @@ languages:
     enabled: true
     base: /
     typo3Language: default
-    locale: en_US
+    locale: en_US.utf8
     iso-639-1: en
     websiteTitle: ''
     navigationTitle: EN
@@ -20,7 +20,7 @@ languages:
     enabled: true
     base: /de/
     typo3Language: de
-    locale: de_DE
+    locale: de_DE.utf8
     iso-639-1: de
     websiteTitle: ''
     navigationTitle: DE
