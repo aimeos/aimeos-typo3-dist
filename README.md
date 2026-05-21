@@ -11,22 +11,13 @@ handling the checkout process and all e-mail handling for notifying the customer
 
 **Table of contents**
 - [Installation](#installation)
-    - [From TER](#from-ter)
     - [Composer](#composer)
+    - [From TER](#from-ter)
+- [Test](#test)
 - [License](#license)
 - [Links](#links)
 
 ## Installation
-
-## From TER
-
-For non-composer installations, you can install the Aimeos distribution using the
-Extension manager. You can choose Aimeos from the list of available distributions:
-
-![TYPO3 distributions](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-typo3-dist-install.png)
-
-Alternatively, you can download the [Aimeos TYPO3 distribution](https://extensions.typo3.org/extension/aimeos_dist/)
-package from the TER.
 
 ### Composer
 
@@ -41,24 +32,11 @@ php composer create-project "typo3/cms-base-distribution:^14.3" myshop
 
 You can also use `"typo3/cms-base-distribution:^13.4"` for TYPO3 13 installations.
 
-to install the required TYPO3 packages. Afterwards, you have to create the
-`FIRST_INSTALL` file to be able to run the setup process:
+Set up your TYPO3 installation by executing this command:
 
 ```bash
-cd myshop
-touch public/FIRST_INSTALL
+./vendor/bin/typo3 setup
 ```
-
-For local installations, you can fire up the internal PHP web server
-
-```bash
-php -d memory_limit=256M -d max_execution_time=240 -d max_input_vars=1500 -S 127.0.0.1:8000 -t public
-```
-
-and open the URL ("http://127.0.0.1:8000") in your web browser. If you use Apache or
-another web server, head over directly to the URL your installation is reachable directly
-without starting the PHP wev server. Complete the TYPO3 setup process before you continue
-to install the Aimeos distribution.
 
 Now install the Aimeos distribution for TYPO3 via command line:
 
@@ -76,6 +54,29 @@ Then, activate the extensions and update the database:
 If you don't want to import the demo data, leave out `--option=setup/default/demo:1`.
 Afterwards, your Aimeos installation is complete and you can check the frontend and
 log into the TYPO3 backend.
+
+### From TER
+
+For non-composer installations, you can install the Aimeos distribution using the
+Extension manager. You can choose Aimeos from the list of available distributions:
+
+![TYPO3 distributions](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-typo3-dist-install.png)
+
+Alternatively, you can download the [Aimeos TYPO3 distribution](https://extensions.typo3.org/extension/aimeos_dist/)
+package from the TER.
+
+## Test
+
+For local installations, you can fire up the internal PHP web server
+
+```bash
+php -d memory_limit=256M -d max_execution_time=240 -d max_input_vars=1500 -S 127.0.0.1:8000 -t public
+```
+
+and open the URL ("http://127.0.0.1:8000") in your web browser. If you use Apache or
+another web server, head over directly to the URL your installation is reachable directly
+without starting the PHP wev server. Complete the TYPO3 setup process before you continue
+to install the Aimeos distribution.
 
 ## License
 
