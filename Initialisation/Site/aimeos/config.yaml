@@ -1,5 +1,7 @@
 base: /
 baseVariants: {  }
+dependencies:
+  - bootstrap-package/full
 errorHandling: {  }
 languages:
   -
