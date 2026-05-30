@@ -1,6 +1,8 @@
 services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
   Aimeos\AimeosDist\EventListener\Setup:
-    tags:
-      - name: event.listener
-        identifier: 'aimeosImport'
-        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionDatabaseContentHasBeenImportedEvent
+    public: true

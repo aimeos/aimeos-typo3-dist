@@ -11,7 +11,9 @@ namespace Aimeos\AimeosDist\EventListener;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Extensionmanager\Event\AfterExtensionDatabaseContentHasBeenImportedEvent;
+use TYPO3\CMS\Core\Attribute\AsEventListener;
+use TYPO3\CMS\Core\Package\Event\PackageInitializationEvent;
+use TYPO3\CMS\Impexp\Initialization\ImportContentOnPackageInitialization;
 
 
 /**
@@ -24,11 +26,12 @@ class Setup
 	/**
 	 * Executes the setup tasks if extension is installed.
 	 *
-	 * @param AfterExtensionDatabaseContentHasBeenImportedEvent $event Event object
+	 * @param PackageInitializationEvent $event Event object
 	 */
-	public function __invoke( AfterExtensionDatabaseContentHasBeenImportedEvent $event ) : void
+	#[AsEventListener( identifier: 'aimeosImport', after: ImportContentOnPackageInitialization::class )]
+	public function __invoke( PackageInitializationEvent $event ) : void
 	{
-		if( $event->getPackageKey() === 'aimeos_dist' ) {
+		if( $event->getExtensionKey() === 'aimeos_dist' ) {
 			$this->createTypoScriptConstants();
 		}
 	}
