@@ -1,5 +1,5 @@
 <a href="https://aimeos.org/">
-    <img src="https://aimeos.org/fileadmin/template/icons/logo.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
+    <img src="https://aimeos.org/images/logo.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
 </a>
 
 # Aimeos online shop distribution for TYPO3
@@ -60,7 +60,7 @@ log into the TYPO3 backend.
 For non-composer installations, you can install the Aimeos distribution using the
 Extension manager. You can choose Aimeos from the list of available distributions:
 
-![TYPO3 distributions](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-typo3-dist-install.png)
+![TYPO3 distributions](https://aimeos.org/images/aimeos-typo3-dist-install.png)
 
 Alternatively, you can download the [Aimeos TYPO3 distribution](https://extensions.typo3.org/extension/aimeos_dist/)
 package from the TER.
